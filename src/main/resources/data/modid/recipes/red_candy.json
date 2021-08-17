@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " # ",
+    "SXS"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:red_dye"
+    },
+    "S": {
+      "item": "modid:caramel"
+    },
+    "X": {
+      "item": "minecraft:sugar"
+    }
+  },
+  "result": {
+    "item": "modid:red_candy",
+    "count": 1
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " # ",
+    "SWS"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:purple_dye"
+    },
+    "S": {
+      "item": "modid:caramel"
+    },
+    "W": {
+      "item": "minecraft:sugar"
+    }
+  },
+  "result": {
+    "item": "modid:purple_candy",
+    "count": 1
+  }
+}

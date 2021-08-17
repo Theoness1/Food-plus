@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#A#"
+  ],
+  "key": {
+    "#": {
+      "item": "modid:caramel"
+    },
+    "A": {
+      "item": "minecraft:apple"
+    }
+  },
+  "result": {
+    "item": "modid:caramel_apple",
+    "count": 1
+  }
+}

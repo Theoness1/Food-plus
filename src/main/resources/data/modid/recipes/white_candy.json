@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " # ",
+    "SWS"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:white_dye"
+    },
+    "S": {
+      "item": "modid:caramel"
+    },
+    "W": {
+      "item": "minecraft:sugar"
+    }
+  },
+  "result": {
+    "item": "modid:white_candy",
+    "count": 1
+  }
+}

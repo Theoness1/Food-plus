@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#E",
+    " S"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:cooked_beef"
+    },
+    "E": {
+      "item": "minecraft:egg"
+    },
+    "S": {
+      "item": "minecraft:sugar"
+    }
+  },
+  "result": {
+    "item": "modid:meat_pie",
+    "count": 1
+
+  }
+}

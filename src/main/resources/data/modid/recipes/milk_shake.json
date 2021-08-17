@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#M#",
+    " G "
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:sugar"
+    },
+    "M": {
+      "item": "minecraft:milk_bucket"
+    },
+    "G": {
+      "item": "minecraft:glass_bottle"
+    }
+  },
+  "result": {
+    "item": "modid:milk_shake",
+    "count": 1
+  }
+}

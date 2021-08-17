@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#A#",
+    " G "
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:sugar"
+    },
+    "A": {
+      "item": "minecraft:apple"
+    },
+    "G": {
+      "item": "minecraft:glass_bottle"
+    }
+  },
+  "result": {
+    "item": "modid:apple_juice",
+    "count": 1
+  }
+}

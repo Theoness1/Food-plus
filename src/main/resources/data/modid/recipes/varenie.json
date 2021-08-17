@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "SSS",
+    "SGS"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:sugar"
+    },
+    "S": {
+      "item": "minecraft:sweet_berries"
+    },
+    "G": {
+      "item": "modid:banka"
+    }
+  },
+  "result": {
+    "item": "modid:varenie",
+    "count": 1
+  }
+}

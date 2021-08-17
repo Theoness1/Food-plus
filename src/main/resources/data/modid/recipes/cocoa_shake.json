@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#C",
+    " G"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:sugar"
+    },
+    "C": {
+      "item": "minecraft:cocoa_beans"
+    },
+    "G":
+      {
+        "item": "modid:milk_shake"
+      }
+
+  },
+  "result": {
+    "item": "modid:cocoa_shake",
+    "count": 1
+  }
+}
