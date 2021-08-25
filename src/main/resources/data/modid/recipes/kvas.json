@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#",
+    "G",
+    "B"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:sugar"
+    },
+    "G": {
+      "item": "minecraft:potion"
+    },
+    "B": {
+      "item": "minecraft:bread"
+    }
+  },
+  "result": {
+    "item": "modid:kvas",
+    "count": 1
+  }
+}

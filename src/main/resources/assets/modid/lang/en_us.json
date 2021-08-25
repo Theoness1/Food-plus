@@ -66,6 +66,18 @@
   "item.modid.melon_juice": "Melon juice",
   "item.modid.sweet_berries_juice": "Berry juice",
   "item.modid.milk_shake": "Milk shake",
-  "item.modid.cocoa_shake": "Cocoa"
-
+  "item.modid.cocoa_shake": "Cocoa",
+  "item.modid.kvas": "Kvas",
+  "item.modid.beef_salad": "Meat salad",
+  "item.modid.pork_salad": "Meat salad",
+  "item.modid.chicken_salad": "Meat salad",
+  "item.modid.fish_salad": "Fish salad",
+  "item.modid.salmon_salad": "Fish salad",
+  "item.modid.mutton_salad": "Meat salad",
+  "item.modid.rabbit_salad": "Meat salad",
+  "item.modid.vegetable_salad": "Vegetable salad",
+  "item.modid.tolchonka": "Mashed potatoes",
+  "item.modid.sushi1": "Sushi",
+  "item.modid.sushi2": "Sushi",
+  "item.modid.fried_pumkin_seed": "Fried seed"
 }

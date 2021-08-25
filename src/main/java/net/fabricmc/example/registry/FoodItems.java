@@ -82,6 +82,21 @@ public class FoodItems {
     public static final Item MILK_SHAKE = new drink_item(new Item.Settings().group(ItemGroup.FOOD).maxCount(16).food(new FoodComponent.Builder().hunger(2).saturationModifier(0.1f).build()));
     public static final Item SWEET_BERRIES_JUICE = new drink_item(new Item.Settings().group(ItemGroup.FOOD).maxCount(16).food(new FoodComponent.Builder().hunger(2).saturationModifier(0.1f).build()));
     public static final Item COCOA_SHAKE = new drink_item(new Item.Settings().group(ItemGroup.FOOD).maxCount(16).food(new FoodComponent.Builder().hunger(3).saturationModifier(0.1f).build()));
+    public static final Item KVAS = new drink_item(new Item.Settings().group(ItemGroup.FOOD).maxCount(16).food(new FoodComponent.Builder().hunger(3).saturationModifier(0.1f).build()));
+    public static final Item BEEF_SALAD = new soup_item(new Item.Settings().group(ItemGroup.FOOD).maxCount(16).food(new FoodComponent.Builder().hunger(10).saturationModifier(1.0f).build()));
+    public static final Item PORK_SALAD = new soup_item(new Item.Settings().group(ItemGroup.FOOD).maxCount(16).food(new FoodComponent.Builder().hunger(10).saturationModifier(1.0f).build()));
+    public static final Item CHICKEN_SALAD = new soup_item(new Item.Settings().group(ItemGroup.FOOD).maxCount(16).food(new FoodComponent.Builder().hunger(9).saturationModifier(0.9f).build()));
+    public static final Item FISH_SALAD = new soup_item(new Item.Settings().group(ItemGroup.FOOD).maxCount(16).food(new FoodComponent.Builder().hunger(8).saturationModifier(0.8f).build()));
+    public static final Item SALMON_SALAD = new soup_item(new Item.Settings().group(ItemGroup.FOOD).maxCount(16).food(new FoodComponent.Builder().hunger(9).saturationModifier(0.8f).build()));
+    public static final Item MUTTON_SALAD = new soup_item(new Item.Settings().group(ItemGroup.FOOD).maxCount(16).food(new FoodComponent.Builder().hunger(9).saturationModifier(0.9f).build()));
+    public static final Item RABBIT_SALAD = new soup_item(new Item.Settings().group(ItemGroup.FOOD).maxCount(16).food(new FoodComponent.Builder().hunger(9).saturationModifier(0.9f).build()));
+    public static final Item VEGETABLE_SALAD = new soup_item(new Item.Settings().group(ItemGroup.FOOD).maxCount(16).food(new FoodComponent.Builder().hunger(4).saturationModifier(0.6f).build()));
+    public static final Item TOLCHONKA = new soup_item(new Item.Settings().group(ItemGroup.FOOD).maxCount(16).food(new FoodComponent.Builder().hunger(7).saturationModifier(0.7f).build()));
+    public static final Item SUSHI1 = new fplus_items(new Item.Settings().group(ItemGroup.FOOD).food(new FoodComponent.Builder().hunger(3).saturationModifier(0.3f).build()));
+    public static final Item SUSHI2 = new fplus_items(new Item.Settings().group(ItemGroup.FOOD).food(new FoodComponent.Builder().hunger(3).saturationModifier(0.3f).build()));
+    public static final Item FRIED_PUMKIN_SEED = new fplus_items(new Item.Settings().group(ItemGroup.FOOD).food(new FoodComponent.Builder().hunger(1).saturationModifier(0.1f).snack().build()));
+
+
 
 
     public static void reg_items() {
@@ -154,5 +169,19 @@ public class FoodItems {
         Registry.register(Registry.ITEM, new Identifier("modid", "milk_shake"), MILK_SHAKE);
         Registry.register(Registry.ITEM, new Identifier("modid", "sweet_berries_juice"), SWEET_BERRIES_JUICE);
         Registry.register(Registry.ITEM, new Identifier("modid", "cocoa_shake"), COCOA_SHAKE);
+        Registry.register(Registry.ITEM, new Identifier("modid", "kvas"), KVAS);
+        Registry.register(Registry.ITEM, new Identifier("modid", "beef_salad"), BEEF_SALAD);
+        Registry.register(Registry.ITEM, new Identifier("modid", "pork_salad"), PORK_SALAD);
+        Registry.register(Registry.ITEM, new Identifier("modid", "chicken_salad"), CHICKEN_SALAD);
+        Registry.register(Registry.ITEM, new Identifier("modid", "fish_salad"), FISH_SALAD);
+        Registry.register(Registry.ITEM, new Identifier("modid", "salmon_salad"), SALMON_SALAD);
+        Registry.register(Registry.ITEM, new Identifier("modid", "mutton_salad"), MUTTON_SALAD);
+        Registry.register(Registry.ITEM, new Identifier("modid", "rabbit_salad"), RABBIT_SALAD);
+        Registry.register(Registry.ITEM, new Identifier("modid", "vegetable_salad"), VEGETABLE_SALAD);
+        Registry.register(Registry.ITEM, new Identifier("modid", "tolchonka"), TOLCHONKA);
+        Registry.register(Registry.ITEM, new Identifier("modid", "sushi1"), SUSHI1);
+        Registry.register(Registry.ITEM, new Identifier("modid", "sushi2"), SUSHI2);
+        Registry.register(Registry.ITEM, new Identifier("modid", "fried_pumkin_seed"), FRIED_PUMKIN_SEED);
+
     }
 }

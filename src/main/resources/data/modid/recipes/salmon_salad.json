@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " # ",
+    "BCP",
+    " R "
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:cooked_salmon"
+    },
+    "B": {
+      "item": "minecraft:beetroot"
+    },
+    "C": {
+      "item": "minecraft:carrot"
+    },
+    "P": {
+      "item": "minecraft:potato"
+    },
+    "R": {
+      "item": "minecraft:bowl"
+    }
+  },
+  "result": {
+    "item": "modid:salmon_salad",
+    "count": 1
+  }
+}

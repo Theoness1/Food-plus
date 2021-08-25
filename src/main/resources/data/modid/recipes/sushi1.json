@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#",
+    "D"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:cod"
+    },
+    "D": {
+      "item": "minecraft:dried_kelp"
+    }
+  },
+  "result": {
+    "item": "modid:sushi1",
+    "count": 1
+  }
+}

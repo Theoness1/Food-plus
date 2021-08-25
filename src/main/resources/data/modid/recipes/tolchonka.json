@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "##",
+    "B "
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:baked_potato"
+    },
+    "B": {
+      "item": "minecraft:bowl"
+    }
+  },
+  "result": {
+    "item": "modid:tolchonka",
+    "count": 1
+  }
+}

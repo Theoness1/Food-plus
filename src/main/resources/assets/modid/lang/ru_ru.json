@@ -66,6 +66,18 @@
   "item.modid.melon_juice": "Арбузный сок",
   "item.modid.sweet_berries_juice": "Ягодный сок",
   "item.modid.milk_shake": "Молочный коктейль",
-  "item.modid.cocoa_shake": "Какао"
-
+  "item.modid.cocoa_shake": "Какао",
+  "item.modid.kvas": "Квас",
+  "item.modid.beef_salad": "Мясной салат",
+  "item.modid.pork_salad": "Мясной салат",
+  "item.modid.chicken_salad": "Мясной салат",
+  "item.modid.fish_salad": "Рыбный салат",
+  "item.modid.salmon_salad": "Рыбный салат",
+  "item.modid.mutton_salad": "Мясной салат",
+  "item.modid.rabbit_salad": "Мясной салат",
+  "item.modid.vegetable_salad": "Овощной салат",
+  "item.modid.tolchonka": "Картофельное пюре",
+  "item.modid.sushi1": "Суши",
+  "item.modid.sushi2": "Суши",
+  "item.modid.fried_pumkin_seed": "Жареные Семечки"
 }

@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#CP",
+    " B "
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:beetroot"
+    },
+    "C": {
+      "item": "minecraft:carrot"
+    },
+    "P": {
+      "item": "minecraft:potato"
+    },
+    "B": {
+      "item": "minecraft:bowl"
+    }
+  },
+  "result": {
+    "item": "modid:vegetable_salad",
+    "count": 1
+  }
+}
