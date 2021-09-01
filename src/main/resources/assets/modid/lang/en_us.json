@@ -79,5 +79,12 @@
   "item.modid.tolchonka": "Mashed potatoes",
   "item.modid.sushi1": "Sushi",
   "item.modid.sushi2": "Sushi",
-  "item.modid.fried_pumkin_seed": "Fried seed"
+  "item.modid.fried_pumkin_seed": "Fried seed",
+  "item.modid.berri_cookie": "Berry cookie",
+  "item.modid.glow_berri_cookie": "Berry cookie",
+  "item.modid.beetroot_cookie": "Beetroot cookie",
+  "item.modid.carrot_cookie": "Carrot cookie",
+  "item.modid.awful_stew": "Awful stew",
+  "item.modid.fried_mushroom1": "Fried mushroom",
+  "item.modid.fried_mushroom2": "Fried mushroom"
 }

@@ -77,7 +77,7 @@ public class FoodItems {
     public static final Item APPLE_JUICE = new drink_item(new Item.Settings().group(ItemGroup.FOOD).maxCount(16).food(new FoodComponent.Builder().hunger(3).saturationModifier(0.1f).build()));
     public static final Item BEETROOT_JUICE = new drink_item(new Item.Settings().group(ItemGroup.FOOD).maxCount(16).food(new FoodComponent.Builder().hunger(3).saturationModifier(0.1f).build()));
     public static final Item CARROT_JUICE = new drink_item(new Item.Settings().group(ItemGroup.FOOD).maxCount(16).food(new FoodComponent.Builder().hunger(3).saturationModifier(0.1f).build()));
-    public static final Item GLOW_BERRIES_JUICE = new drink_item(new Item.Settings().group(ItemGroup.FOOD).maxCount(16).food(new FoodComponent.Builder().hunger(2).saturationModifier(0.1f).build()));
+    public static final Item GLOW_BERRIES_JUICE = new drink_item(new Item.Settings().group(ItemGroup.FOOD).maxCount(16).food(new FoodComponent.Builder().hunger(2).saturationModifier(0.1f).statusEffect(new StatusEffectInstance(StatusEffects.GLOWING, 20*5), 0.20f).build()));
     public static final Item MELON_JUICE = new drink_item(new Item.Settings().group(ItemGroup.FOOD).maxCount(16).food(new FoodComponent.Builder().hunger(3).saturationModifier(0.1f).build()));
     public static final Item MILK_SHAKE = new drink_item(new Item.Settings().group(ItemGroup.FOOD).maxCount(16).food(new FoodComponent.Builder().hunger(2).saturationModifier(0.1f).build()));
     public static final Item SWEET_BERRIES_JUICE = new drink_item(new Item.Settings().group(ItemGroup.FOOD).maxCount(16).food(new FoodComponent.Builder().hunger(2).saturationModifier(0.1f).build()));
@@ -95,6 +95,13 @@ public class FoodItems {
     public static final Item SUSHI1 = new fplus_items(new Item.Settings().group(ItemGroup.FOOD).food(new FoodComponent.Builder().hunger(3).saturationModifier(0.3f).build()));
     public static final Item SUSHI2 = new fplus_items(new Item.Settings().group(ItemGroup.FOOD).food(new FoodComponent.Builder().hunger(3).saturationModifier(0.3f).build()));
     public static final Item FRIED_PUMKIN_SEED = new fplus_items(new Item.Settings().group(ItemGroup.FOOD).food(new FoodComponent.Builder().hunger(1).saturationModifier(0.1f).snack().build()));
+    public static final Item BERRY_COOKIE = new fplus_items(new Item.Settings().group(ItemGroup.FOOD).food(new FoodComponent.Builder().hunger(2).saturationModifier(0.4f).build()));
+    public static final Item GLOW_BERRY_COOKIE = new fplus_items(new Item.Settings().group(ItemGroup.FOOD).food(new FoodComponent.Builder().hunger(2).saturationModifier(0.4f).statusEffect(new StatusEffectInstance(StatusEffects.GLOWING, 20*5), 0.20f).build()));
+    public static final Item BEETROOT_COOKIE = new fplus_items(new Item.Settings().group(ItemGroup.FOOD).food(new FoodComponent.Builder().hunger(2).saturationModifier(0.5f).build()));
+    public static final Item CARROT_COOKIE = new fplus_items(new Item.Settings().group(ItemGroup.FOOD).food(new FoodComponent.Builder().hunger(2).saturationModifier(0.5f).build()));
+    public static final Item AWFUL_STEW = new soup_item(new Item.Settings().group(ItemGroup.FOOD).maxCount(16).food(new FoodComponent.Builder().hunger(4).saturationModifier(0.3f).statusEffect(new StatusEffectInstance(StatusEffects.POISON, 20*5), 0.80f).statusEffect(new StatusEffectInstance(StatusEffects.HUNGER, 20*20), 0.75f).build()));
+    public static final Item FRIED_MUSHROOM1 = new fplus_items(new Item.Settings().group(ItemGroup.FOOD).food(new FoodComponent.Builder().hunger(1).saturationModifier(0.2f).build()));
+    public static final Item FRIED_MUSHROOM2 = new fplus_items(new Item.Settings().group(ItemGroup.FOOD).food(new FoodComponent.Builder().hunger(1).saturationModifier(0.2f).statusEffect(new StatusEffectInstance(StatusEffects.POISON, 20*6), 0.30f).build()));
 
 
 
@@ -182,6 +189,13 @@ public class FoodItems {
         Registry.register(Registry.ITEM, new Identifier("modid", "sushi1"), SUSHI1);
         Registry.register(Registry.ITEM, new Identifier("modid", "sushi2"), SUSHI2);
         Registry.register(Registry.ITEM, new Identifier("modid", "fried_pumkin_seed"), FRIED_PUMKIN_SEED);
+        Registry.register(Registry.ITEM, new Identifier("modid", "berri_cookie"), BERRY_COOKIE);
+        Registry.register(Registry.ITEM, new Identifier("modid", "glow_berri_cookie"), GLOW_BERRY_COOKIE);
+        Registry.register(Registry.ITEM, new Identifier("modid", "beetroot_cookie"), BEETROOT_COOKIE);
+        Registry.register(Registry.ITEM, new Identifier("modid", "carrot_cookie"), CARROT_COOKIE);
+        Registry.register(Registry.ITEM, new Identifier("modid", "awful_stew"), AWFUL_STEW);
+        Registry.register(Registry.ITEM, new Identifier("modid", "fried_mushroom1"), FRIED_MUSHROOM1);
+        Registry.register(Registry.ITEM, new Identifier("modid", "fried_mushroom2"), FRIED_MUSHROOM2);
 
     }
 }

@@ -79,5 +79,12 @@
   "item.modid.tolchonka": "Картофельное пюре",
   "item.modid.sushi1": "Суши",
   "item.modid.sushi2": "Суши",
-  "item.modid.fried_pumkin_seed": "Жареные Семечки"
+  "item.modid.fried_pumkin_seed": "Жареные Семечки",
+  "item.modid.berri_cookie": "Ягодное печенье",
+  "item.modid.glow_berri_cookie": "Ягодное печенье",
+  "item.modid.beetroot_cookie": "Свекольное печенье",
+  "item.modid.carrot_cookie": "Морковное печенье",
+  "item.modid.awful_stew": "Ужасная похлёбка",
+  "item.modid.fried_mushroom1": "Жареный гриб",
+  "item.modid.fried_mushroom2": "Жареный гриб"
 }
