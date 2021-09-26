@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " # ",
+    "SWS"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:lime_dye"
+    },
+    "S": {
+      "item": "foodplusid:caramel"
+    },
+    "W": {
+      "item": "minecraft:sugar"
+    }
+  },
+  "result": {
+    "item": "foodplusid:lime_candy",
+    "count": 2
+  }
+}

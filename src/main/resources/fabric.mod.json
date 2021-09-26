@@ -1,24 +1,24 @@
 {
   "schemaVersion": 1,
-  "id": "modid",
-  "version": "${1.2}",
+  "id": "foodplusid",
+  "version": "${version}",
 
   "name": "Food+",
-  "description": "<3",
+  "description": "Mod adds more 'vanilla-style' food",
   "authors": [
     "theone_ss"
   ],
   "contact": {
-    "homepage": "theone_ss on curseforge"
+    "homepage": "https://www.curseforge.com/members/theone_ss"
   },
 
   "license": "MIT",
-  "icon": "assets/modid/icon.png",
+  "icon": "assets/foodplusid/foodplusicon.png",
 
   "environment": "*",
   "entrypoints": {
     "main": [
-      "net.fabricmc.example.Foodplus"
+      "ru.theone_ss.foodplus.Foodplus"
     ]
   },
 
@@ -29,6 +29,7 @@
     "java": ">=16"
   },
   "suggests": {
-    "another-mod": "*"
+    "another-mod1": "https://www.curseforge.com/minecraft/mc-mods/eating-animation-fabric",
+    "another-mod2": "https://www.curseforge.com/minecraft/mc-mods/pelmen-fabric"
   }
 }

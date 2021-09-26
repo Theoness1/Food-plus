@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " # ",
+    "S# ",
+    " G "
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:glow_berries"
+    },
+    "S": {
+      "item": "minecraft:sugar"
+    },
+    "G": {
+      "item": "minecraft:glass_bottle"
+    }
+  },
+  "result": {
+    "item": "foodplusid:glow_berries_juice",
+    "count": 1
+  }
+}

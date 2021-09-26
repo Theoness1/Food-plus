@@ -1,9 +1,0 @@
-{
-  "type": "minecraft:smoking",
-  "ingredient": {
-    "item": "minecraft:apple"
-  },
-  "result": "modid:baked_apple",
-  "experience": 0.1,
-  "cookingtime": 200
-}

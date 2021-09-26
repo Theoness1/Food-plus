@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "GGG",
+    " Y "
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:sugar"
+    },
+    "G": {
+      "item": "minecraft:glow_berries"
+    },
+    "Y": {
+      "item": "foodplusid:banka"
+    }
+  },
+  "result": {
+    "item": "foodplusid:glow_varenie",
+    "count": 1
+  }
+}

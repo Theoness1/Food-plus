@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "SSS",
+    " G "
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:sugar"
+    },
+    "S": {
+      "item": "minecraft:sweet_berries"
+    },
+    "G": {
+      "item": "foodplusid:banka"
+    }
+  },
+  "result": {
+    "item": "foodplusid:varenie",
+    "count": 1
+  }
+}

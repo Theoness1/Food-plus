@@ -1,7 +1,0 @@
-{
-  "parent": "item/generated",
-  "textures": {
-    "layer0": "modid:item/blue_ice_cream"
-  }
-
-}

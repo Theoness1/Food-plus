@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " # ",
+    "BCP",
+    " I "
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:cooked_porkchop"
+    },
+    "B": {
+      "item": "minecraft:beetroot"
+    },
+    "C": {
+      "item": "minecraft:carrot"
+    },
+    "P": {
+      "item": "minecraft:potato"
+    },
+    "I": {
+      "item": "minecraft:bowl"
+    }
+  },
+  "result": {
+    "item": "foodplusid:pork_salad",
+    "count": 1
+  }
+}
