@@ -1,0 +1,16 @@
+{
+  "replace": false,
+  "values": [
+    "foodplusid:apple_juice",
+    "foodplusid:beetroot_juice",
+    "foodplusid:carrot_juice",
+    "foodplusid:cocoa_shake",
+    "foodplusid:glow_berries_juice",
+    "foodplusid:melon_juice",
+    "foodplusid:milk_shake",
+    "foodplusid:sweet_berries_juice",
+    "foodplusid:milk_shake",
+    "foodplusid:glow_varenie",
+    "foodplusid:varenie"
+  ]
+}

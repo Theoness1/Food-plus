@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "foodplusid:ad_soup",
+    "foodplusid:awful_stew",
+    "foodplusid:pumkin_soup"
+  ]
+}
