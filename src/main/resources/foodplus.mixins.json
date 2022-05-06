@@ -1,0 +1,14 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "ru.theone_ss.foodplus.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "client": [
+    "GlowLichenMixin"
+
+  ],
+  "server": [],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

@@ -22,6 +22,10 @@
     ]
   },
 
+  "mixins": [
+    "foodplus.mixins.json"
+  ],
+
   "depends": {
     "fabricloader": ">=0.12.6",
     "fabric": "*",

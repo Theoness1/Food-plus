@@ -61,5 +61,15 @@
   "item.foodplusid.carrot_cookie": "Морковное печенье",
   "item.foodplusid.awful_stew": "Ужасная похлёбка",
   "item.foodplusid.fried_mushroom1": "Жареный гриб",
-  "item.foodplusid.fried_mushroom2": "Жареный гриб"
+  "item.foodplusid.fried_mushroom2": "Жареный гриб",
+
+  "item.foodplusid.chocolate": "Шоколадка",
+  "item.foodplusid.lichen": "Мох",
+  "item.foodplusid.lichen_bread": "Хлеб из мха",
+  "item.foodplusid.milled_lichen": "Молотых мох",
+  "item.foodplusid.sea_salad": "Салат из ламинария",
+  "item.foodplusid.sunflower_seeds": "Семечки",
+  "item.foodplusid.carrot_bread": "Морковный хлеб",
+  "item.foodplusid.potato_bread": "Картофельный хлеб",
+  "item.foodplusid.beet_bread": "Свекольный хлеб"
 }

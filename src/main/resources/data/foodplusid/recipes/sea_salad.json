@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#S#",
+    "###",
+    " B "
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:kelp"
+    },
+    "S": {
+      "item": "minecraft:sugar"
+    },
+    "B": {
+      "item": "minecraft:bowl"
+    }
+  },
+  "result": {
+    "item": "foodplusid:sea_salad",
+    "count": 1
+  }
+}

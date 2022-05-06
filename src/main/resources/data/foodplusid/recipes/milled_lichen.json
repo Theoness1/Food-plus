@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "foodplusid:lichen"
+    }
+  ],
+  "result": {
+    "item": "foodplusid:milled_lichen",
+    "count": 1
+  }
+}

@@ -12,7 +12,6 @@ public class soup_item extends Item {
         super(settings);
     }
 
-    @Override
     public ItemStack finishUsing(ItemStack stack, World world, LivingEntity user) {
         super.finishUsing(stack, world, user);
 

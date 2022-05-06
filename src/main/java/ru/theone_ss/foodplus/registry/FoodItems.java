@@ -78,6 +78,16 @@ public class FoodItems {
     public static final Item FRIED_MUSHROOM1 = new fplus_items(new Item.Settings().group(ItemGroup.FOOD).food(new FoodComponent.Builder().hunger(1).saturationModifier(0.1f).snack().build()));
     public static final Item FRIED_MUSHROOM2 = new fplus_items(new Item.Settings().group(ItemGroup.FOOD).food(new FoodComponent.Builder().hunger(1).saturationModifier(0.1f).statusEffect(new StatusEffectInstance(StatusEffects.POISON, 20*6), 0.20f).snack().build()));
 
+    public static final Item CHOCOLATE = new fplus_items(new Item.Settings().group(ItemGroup.FOOD).food(new FoodComponent.Builder().hunger(3).saturationModifier(0.2f).build()));
+    public static final Item LICHEN = new fplus_items(new Item.Settings().group(ItemGroup.FOOD).food(new FoodComponent.Builder().hunger(1).saturationModifier(0.1f).statusEffect(new StatusEffectInstance(StatusEffects.POISON, 20*4), 0.40f).snack().build()));
+    public static final Item LICHEN_BREAD = new fplus_items(new Item.Settings().group(ItemGroup.FOOD).food(new FoodComponent.Builder().hunger(4).saturationModifier(0.4f).build()));
+    public static final Item MILLED_LICHEN = new fplus_items(new Item.Settings().group(ItemGroup.FOOD).food(new FoodComponent.Builder().hunger(1).saturationModifier(0.1f).statusEffect(new StatusEffectInstance(StatusEffects.POISON, 20*4), 0.40f).snack().build()));
+    public static final Item SEA_SALAD = new soup_item(new Item.Settings().group(ItemGroup.FOOD).food(new FoodComponent.Builder().hunger(3).saturationModifier(0.3f).build()));
+    public static final Item SUNFLOWER_SEEDS = new fplus_items(new Item.Settings().group(ItemGroup.FOOD).food(new FoodComponent.Builder().hunger(1).saturationModifier(0.1f).snack().build()));
+    public static final Item CARROT_BREAD = new fplus_items(new Item.Settings().group(ItemGroup.FOOD).food(new FoodComponent.Builder().hunger(4).saturationModifier(0.8f).build()));
+    public static final Item POTATO_BREAD = new fplus_items(new Item.Settings().group(ItemGroup.FOOD).food(new FoodComponent.Builder().hunger(5).saturationModifier(0.7f).build()));
+    public static final Item BEET_BREAD = new fplus_items(new Item.Settings().group(ItemGroup.FOOD).food(new FoodComponent.Builder().hunger(5).saturationModifier(0.7f).build()));
+
 
     public static void reg_items() {
 
@@ -144,6 +154,17 @@ public class FoodItems {
         Registry.register(Registry.ITEM, new Identifier("foodplusid", "fried_pumkin_seed"), FRIED_PUMKIN_SEED);
         Registry.register(Registry.ITEM, new Identifier("foodplusid", "fried_mushroom1"), FRIED_MUSHROOM1);
         Registry.register(Registry.ITEM, new Identifier("foodplusid", "fried_mushroom2"), FRIED_MUSHROOM2);
+
+        Registry.register(Registry.ITEM, new Identifier("foodplusid", "chocolate"), CHOCOLATE);
+        Registry.register(Registry.ITEM, new Identifier("foodplusid", "lichen"), LICHEN);
+        Registry.register(Registry.ITEM, new Identifier("foodplusid", "lichen_bread"), LICHEN_BREAD);
+        Registry.register(Registry.ITEM, new Identifier("foodplusid", "milled_lichen"), MILLED_LICHEN);
+        Registry.register(Registry.ITEM, new Identifier("foodplusid", "sea_salad"), SEA_SALAD);
+        Registry.register(Registry.ITEM, new Identifier("foodplusid", "sunflower_seeds"), SUNFLOWER_SEEDS);
+        Registry.register(Registry.ITEM, new Identifier("foodplusid", "carrot_bread"), CARROT_BREAD);
+        Registry.register(Registry.ITEM, new Identifier("foodplusid", "potato_bread"), POTATO_BREAD);
+        Registry.register(Registry.ITEM, new Identifier("foodplusid", "beet_bread"), BEET_BREAD);
+
 
     }
 }

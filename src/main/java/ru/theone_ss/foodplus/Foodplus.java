@@ -6,8 +6,6 @@ import ru.theone_ss.foodplus.registry.FoodItems;
 public class Foodplus implements ModInitializer {
 
 
-
-	@Override
 	public void onInitialize() {
 
 

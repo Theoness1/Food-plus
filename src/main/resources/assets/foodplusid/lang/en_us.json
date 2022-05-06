@@ -61,5 +61,15 @@
   "item.foodplusid.carrot_cookie": "Carrot cookie",
   "item.foodplusid.awful_stew": "Awful stew",
   "item.foodplusid.fried_mushroom1": "Fried mushroom",
-  "item.foodplusid.fried_mushroom2": "Fried mushroom"
+  "item.foodplusid.fried_mushroom2": "Fried mushroom",
+
+  "item.foodplusid.chocolate": "Chocolate",
+  "item.foodplusid.lichen": "Lichen",
+  "item.foodplusid.lichen_bread": "Lichen Bread",
+  "item.foodplusid.milled_lichen": "Milled lichen",
+  "item.foodplusid.sea_salad": "Sea salad",
+  "item.foodplusid.sunflower_seeds": "Sunflower seeds",
+  "item.foodplusid.carrot_bread": "Carrot bread",
+  "item.foodplusid.potato_bread": "Potato bread",
+  "item.foodplusid.beet_bread": "Beet bread"
 }

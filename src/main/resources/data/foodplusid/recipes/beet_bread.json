@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "##W"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:wheat"
+    },
+    "W": {
+      "item": "minecraft:beetroot"
+    }
+  },
+  "result": {
+    "item": "foodplusid:beet_bread",
+    "count": 1
+  }
+}
