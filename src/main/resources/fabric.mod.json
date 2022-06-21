@@ -27,13 +27,9 @@
   ],
 
   "depends": {
-    "fabricloader": ">=0.12.6",
+    "fabricloader": "*",
     "fabric": "*",
-    "minecraft": "1.18.x",
+    "minecraft": ">=1.19",
     "java": ">=17"
-  },
-  "suggests": {
-    "another-mod1": "https://www.curseforge.com/minecraft/mc-mods/eating-animation-fabric",
-    "another-mod2": "https://www.curseforge.com/minecraft/mc-mods/pelmen-fabric"
   }
 }
