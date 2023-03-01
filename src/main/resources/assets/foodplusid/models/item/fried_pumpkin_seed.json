@@ -1,7 +1,7 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "foodplusid:item/fried_pumkin_seed"
+    "layer0": "foodplusid:item/fried_pumpkin_seed"
   }
 
 }
