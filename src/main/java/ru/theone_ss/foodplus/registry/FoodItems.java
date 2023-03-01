@@ -1,170 +1,118 @@
 package ru.theone_ss.foodplus.registry;
 
-import ru.theone_ss.foodplus.mod_food.banka_item;
-import ru.theone_ss.foodplus.mod_food.drink_item;
-import ru.theone_ss.foodplus.mod_food.soup_item;
-import ru.theone_ss.foodplus.mod_items.fplus_items;
+import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
+import net.minecraft.item.ItemGroup;
+import net.minecraft.registry.Registries;
+import net.minecraft.registry.Registry;
+import ru.theone_ss.foodplus.Foodplus;
+import ru.theone_ss.foodplus.item.BankaItem;
+import ru.theone_ss.foodplus.item.DrinkItem;
+import ru.theone_ss.foodplus.item.SoupItem;
+import ru.theone_ss.foodplus.item.FoodPlusItem;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.FoodComponent;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroup;
 import net.minecraft.util.Identifier;
-import net.minecraft.util.registry.Registry;
+
+import java.util.LinkedHashMap;
+import java.util.Map;
 
 public class FoodItems {
+    public static final Map<Identifier, Item> ITEMS = new LinkedHashMap<>();
+    public static final Item BEEF_SALAD = add("beef_salad", new SoupItem(new Item.Settings().maxCount(16).food(new FoodComponent.Builder().hunger(11).saturationModifier(1.1f).build())));
+    public static final Item PORK_SALAD = add("pork_salad", new SoupItem(new Item.Settings().maxCount(16).food(new FoodComponent.Builder().hunger(11).saturationModifier(1.1f).build())));
+    public static final Item CHICKEN_SALAD = add("chicken_salad", new SoupItem(new Item.Settings().maxCount(16).food(new FoodComponent.Builder().hunger(10).saturationModifier(1f).build())));
+    public static final Item FISH_SALAD = add("fish_salad", new SoupItem(new Item.Settings().maxCount(16).food(new FoodComponent.Builder().hunger(10).saturationModifier(1f).build())));
+    public static final Item SALMON_SALAD = add("salmon_salad", new SoupItem(new Item.Settings().maxCount(16).food(new FoodComponent.Builder().hunger(10).saturationModifier(1f).build())));
+    public static final Item MUTTON_SALAD = add("mutton_salad", new SoupItem(new Item.Settings().maxCount(16).food(new FoodComponent.Builder().hunger(10).saturationModifier(1f).build())));
+    public static final Item RABBIT_SALAD = add("rabbit_salad", new SoupItem(new Item.Settings().maxCount(16).food(new FoodComponent.Builder().hunger(10).saturationModifier(1f).build())));
+    public static final Item BEEF_SANDWICH = add("beef_sandwich", new FoodPlusItem(new Item.Settings().food(new FoodComponent.Builder().hunger(9).saturationModifier(1.1f).build())));
+    public static final Item PORK_SANDWICH = add("pork_sandwich", new FoodPlusItem(new Item.Settings().food(new FoodComponent.Builder().hunger(9).saturationModifier(1.1f).build())));
+    public static final Item MUTTON_SANDWICH = add("mutton_sandwich", new FoodPlusItem(new Item.Settings().food(new FoodComponent.Builder().hunger(8).saturationModifier(1f).build())));
+    public static final Item CHICKEN_SANDWICH = add("chicken_sandwich", new FoodPlusItem(new Item.Settings().food(new FoodComponent.Builder().hunger(8).saturationModifier(1f).build())));
+    public static final Item SALMON_SANDWICH = add("salmon_sandwich", new FoodPlusItem(new Item.Settings().food(new FoodComponent.Builder().hunger(8).saturationModifier(1f).build())));
+    public static final Item RABBIT_SANDWICH = add("rabbit_sandwich", new FoodPlusItem(new Item.Settings().food(new FoodComponent.Builder().hunger(8).saturationModifier(1f).build())));
+    public static final Item FISH_SANDWICH = add("fish_sandwich", new FoodPlusItem(new Item.Settings().food(new FoodComponent.Builder().hunger(8).saturationModifier(1f).build())));
+    public static final Item GOLD_BEETROOT = add("gold_beetroot", new FoodPlusItem(new Item.Settings().food(new FoodComponent.Builder().hunger(6).saturationModifier(1.1f).build())));
+    public static final Item GOLD_POTATO = add("gold_potato", new FoodPlusItem(new Item.Settings().food(new FoodComponent.Builder().hunger(6).saturationModifier(0.9f).build())));
+    public static final Item TOLCHONKA = add("tolchonka", new SoupItem(new Item.Settings().maxCount(16).food(new FoodComponent.Builder().hunger(7).saturationModifier(0.8f).build())));
+    public static final Item VEGETABLE_SALAD = add("vegetable_salad", new SoupItem(new Item.Settings().maxCount(16).food(new FoodComponent.Builder().hunger(6).saturationModifier(0.7f).build())));
+    public static final Item MEAT_PIE = add("meat_pie", new FoodPlusItem(new Item.Settings().food(new FoodComponent.Builder().hunger(8).saturationModifier(1f).build())));
+    public static final Item APPLE_PIE = add("apple_pie", new FoodPlusItem(new Item.Settings().food(new FoodComponent.Builder().hunger(7).saturationModifier(0.5f).build())));
+    public static final Item CARROT_PIE = add("carrot_pie", new FoodPlusItem(new Item.Settings().food(new FoodComponent.Builder().hunger(7).saturationModifier(0.6f).build())));
+    public static final Item SWEET_BERRIES_PIE = add("sweet_berries_pie", new FoodPlusItem(new Item.Settings().food(new FoodComponent.Builder().hunger(6).saturationModifier(0.3f).build())));
+    public static final Item GLOW_BERRIES_PIE = add("glow_berries_pie", new FoodPlusItem(new Item.Settings().food(new FoodComponent.Builder().hunger(6).saturationModifier(0.3f).statusEffect(new StatusEffectInstance(StatusEffects.GLOWING, 20*6), 0.05f).build())));
+    public static final Item PUMPKIN_SOUP = add("pumpkin_soup", new SoupItem(new Item.Settings().maxCount(16).food(new FoodComponent.Builder().hunger(6).saturationModifier(0.5f).build())));
+    public static final Item BANKA = add("banka", new FoodPlusItem(new Item.Settings()));
+    public static final Item VARENIE = add("varenie", new BankaItem(new Item.Settings().maxCount(16).food(new FoodComponent.Builder().hunger(5).saturationModifier(0.3f).statusEffect(new StatusEffectInstance(StatusEffects.REGENERATION, 20*5), 0.10f).build())));
+    public static final Item GLOW_VARENIE = add("glow_varenie", new BankaItem(new Item.Settings().maxCount(16).food(new FoodComponent.Builder().hunger(5).saturationModifier(0.4f).statusEffect(new StatusEffectInstance(StatusEffects.GLOWING, 20*10), 0.05f).build())));
+    public static final Item APPLE_JUICE = add("apple_juice", new DrinkItem(new Item.Settings().maxCount(16).food(new FoodComponent.Builder().hunger(4).saturationModifier(0.1f).build())));
+    public static final Item BEETROOT_JUICE = add("beetroot_juice", new DrinkItem(new Item.Settings().maxCount(16).food(new FoodComponent.Builder().hunger(3).saturationModifier(0.1f).build())));
+    public static final Item CARROT_JUICE = add("carrot_juice", new DrinkItem(new Item.Settings().maxCount(16).food(new FoodComponent.Builder().hunger(3).saturationModifier(0.1f).build())));
+    public static final Item GLOW_BERRIES_JUICE = add("glow_berries_juice", new DrinkItem(new Item.Settings().maxCount(16).food(new FoodComponent.Builder().hunger(3).saturationModifier(0.1f).statusEffect(new StatusEffectInstance(StatusEffects.GLOWING, 20*5), 0.05f).build())));
+    public static final Item MELON_JUICE = add("melon_juice", new DrinkItem(new Item.Settings().maxCount(16).food(new FoodComponent.Builder().hunger(3).saturationModifier(0.1f).build())));
+    public static final Item MILK_SHAKE = add("milk_shake", new DrinkItem(new Item.Settings().maxCount(16).food(new FoodComponent.Builder().hunger(2).saturationModifier(0.1f).build())));
+    public static final Item SWEET_BERRIES_JUICE = add("sweet_berries_juice", new DrinkItem(new Item.Settings().maxCount(16).food(new FoodComponent.Builder().hunger(3).saturationModifier(0.1f).build())));
+    public static final Item COCOA_SHAKE = add("cocoa_shake", new DrinkItem(new Item.Settings().maxCount(16).food(new FoodComponent.Builder().hunger(3).saturationModifier(0.1f).build())));
+    public static final Item BERRY_COOKIE = add("berry_cookie", new FoodPlusItem(new Item.Settings().food(new FoodComponent.Builder().hunger(2).saturationModifier(0.1f).build())));
+    public static final Item GLOW_BERRY_COOKIE = add("glow_berry_cookie", new FoodPlusItem(new Item.Settings().food(new FoodComponent.Builder().hunger(2).saturationModifier(0.1f).statusEffect(new StatusEffectInstance(StatusEffects.GLOWING, 20*5), 0.05f).build())));
+    public static final Item BEETROOT_COOKIE = add("beetroot_cookie", new FoodPlusItem(new Item.Settings().food(new FoodComponent.Builder().hunger(2).saturationModifier(0.2f).build())));
+    public static final Item CARROT_COOKIE = add("carrot_cookie", new FoodPlusItem(new Item.Settings().food(new FoodComponent.Builder().hunger(2).saturationModifier(0.2f).build())));
+    public static final Item CARAMEL = add("caramel", new FoodPlusItem(new Item.Settings().food(new FoodComponent.Builder().hunger(1).snack().build())));
+    public static final Item BLACK_CANDY = add("black_candy", new FoodPlusItem(new Item.Settings().food(new FoodComponent.Builder().hunger(2).saturationModifier(0.1f).snack().build())));
+    public static final Item BLUE_CANDY = add("blue_candy", new FoodPlusItem(new Item.Settings().food(new FoodComponent.Builder().hunger(2).saturationModifier(0.1f).snack().build())));
+    public static final Item BROWN_CANDY = add("brown_candy", new FoodPlusItem(new Item.Settings().food(new FoodComponent.Builder().hunger(2).saturationModifier(0.1f).snack().build())));
+    public static final Item CYAN_CANDY = add("cyan_candy", new FoodPlusItem(new Item.Settings().food(new FoodComponent.Builder().hunger(2).saturationModifier(0.1f).snack().build())));
+    public static final Item GRAY_CANDY = add("gray_candy", new FoodPlusItem(new Item.Settings().food(new FoodComponent.Builder().hunger(2).saturationModifier(0.1f).snack().build())));
+    public static final Item GREEN_CANDY = add("green_candy", new FoodPlusItem(new Item.Settings().food(new FoodComponent.Builder().hunger(2).saturationModifier(0.1f).snack().build())));
+    public static final Item LIGHT_BLUE_CANDY = add("light_blue_candy", new FoodPlusItem(new Item.Settings().food(new FoodComponent.Builder().hunger(2).saturationModifier(0.1f).snack().build())));
+    public static final Item LIGHT_GRAY_CANDY = add("light_gray_candy", new FoodPlusItem(new Item.Settings().food(new FoodComponent.Builder().hunger(2).saturationModifier(0.1f).snack().build())));
+    public static final Item LIME_CANDY = add("lime_candy", new FoodPlusItem(new Item.Settings().food(new FoodComponent.Builder().hunger(2).saturationModifier(0.1f).snack().build())));
+    public static final Item MAGENTA_CANDY = add("magenta_candy", new FoodPlusItem(new Item.Settings().food(new FoodComponent.Builder().hunger(2).saturationModifier(0.1f).snack().build())));
+    public static final Item ORANGE_CANDY = add("orange_candy", new FoodPlusItem(new Item.Settings().food(new FoodComponent.Builder().hunger(2).saturationModifier(0.1f).snack().build())));
+    public static final Item PINK_CANDY = add("pink_candy", new FoodPlusItem(new Item.Settings().food(new FoodComponent.Builder().hunger(2).saturationModifier(0.1f).snack().build())));
+    public static final Item PURPLE_CANDY = add("purple_candy", new FoodPlusItem(new Item.Settings().food(new FoodComponent.Builder().hunger(2).saturationModifier(0.1f).snack().build())));
+    public static final Item RED_CANDY = add("red_candy", new FoodPlusItem(new Item.Settings().food(new FoodComponent.Builder().hunger(2).saturationModifier(0.1f).snack().build())));
+    public static final Item WHITE_CANDY = add("white_candy", new FoodPlusItem(new Item.Settings().food(new FoodComponent.Builder().hunger(2).saturationModifier(0.1f).snack().build())));
+    public static final Item YELLOW_CANDY = add("yellow_candy", new FoodPlusItem(new Item.Settings().food(new FoodComponent.Builder().hunger(2).saturationModifier(0.1f).snack().build())));
+    public static final Item RED_SUS_CANDY = add("red_sus_candy", new FoodPlusItem(new Item.Settings().food(new FoodComponent.Builder().hunger(2).saturationModifier(0.1f).snack().build())));
+    public static final Item BAKED_FLESH = add("baked_flesh", new FoodPlusItem(new Item.Settings().food(new FoodComponent.Builder().hunger(4).saturationModifier(0.1f).statusEffect(new StatusEffectInstance(StatusEffects.HUNGER, 20*20), 0.45f).meat().build())));
+    public static final Item AD_SOUP = add("ad_soup", new SoupItem(new Item.Settings().maxCount(16).food(new FoodComponent.Builder().hunger(3).saturationModifier(0.3f).statusEffect(new StatusEffectInstance(StatusEffects.NAUSEA, 20*15), 0.35f).statusEffect(new StatusEffectInstance(StatusEffects.WITHER, 20*5), 0.25f).build())));
+    public static final Item AWFUL_STEW = add("awful_stew", new SoupItem(new Item.Settings().maxCount(16).food(new FoodComponent.Builder().hunger(4).saturationModifier(0.3f).statusEffect(new StatusEffectInstance(StatusEffects.POISON, 20*5), 0.50f).statusEffect(new StatusEffectInstance(StatusEffects.HUNGER, 20*20), 0.50f).build())));
+    public static final Item FRIED_PUMPKIN_SEED = add("fried_pumpkin_seed", new FoodPlusItem(new Item.Settings().food(new FoodComponent.Builder().hunger(1).saturationModifier(0.1f).snack().build())));
+    public static final Item FRIED_MUSHROOM1 = add("fried_mushroom1", new FoodPlusItem(new Item.Settings().food(new FoodComponent.Builder().hunger(1).saturationModifier(0.1f).snack().build())));
+    public static final Item FRIED_MUSHROOM2 = add("fried_mushroom2", new FoodPlusItem(new Item.Settings().food(new FoodComponent.Builder().hunger(1).saturationModifier(0.1f).statusEffect(new StatusEffectInstance(StatusEffects.POISON, 20*6), 0.20f).snack().build())));
+    public static final Item CHOCOLATE = add("chocolate", new FoodPlusItem(new Item.Settings().food(new FoodComponent.Builder().hunger(3).saturationModifier(0.2f).build())));
 
-    public static final Item BEEF_SALAD = new soup_item(new Item.Settings().group(ItemGroup.FOOD).maxCount(16).food(new FoodComponent.Builder().hunger(11).saturationModifier(1.1f).build()));
-    public static final Item PORK_SALAD = new soup_item(new Item.Settings().group(ItemGroup.FOOD).maxCount(16).food(new FoodComponent.Builder().hunger(11).saturationModifier(1.1f).build()));
-    public static final Item CHICKEN_SALAD = new soup_item(new Item.Settings().group(ItemGroup.FOOD).maxCount(16).food(new FoodComponent.Builder().hunger(10).saturationModifier(1f).build()));
-    public static final Item FISH_SALAD = new soup_item(new Item.Settings().group(ItemGroup.FOOD).maxCount(16).food(new FoodComponent.Builder().hunger(10).saturationModifier(1f).build()));
-    public static final Item SALMON_SALAD = new soup_item(new Item.Settings().group(ItemGroup.FOOD).maxCount(16).food(new FoodComponent.Builder().hunger(10).saturationModifier(1f).build()));
-    public static final Item MUTTON_SALAD = new soup_item(new Item.Settings().group(ItemGroup.FOOD).maxCount(16).food(new FoodComponent.Builder().hunger(10).saturationModifier(1f).build()));
-    public static final Item RABBIT_SALAD = new soup_item(new Item.Settings().group(ItemGroup.FOOD).maxCount(16).food(new FoodComponent.Builder().hunger(10).saturationModifier(1f).build()));
-    public static final Item BEEF_SANDWICH = new fplus_items(new Item.Settings().group(ItemGroup.FOOD).food(new FoodComponent.Builder().hunger(9).saturationModifier(1.1f).build()));
-    public static final Item PORK_SANDWICH = new fplus_items(new Item.Settings().group(ItemGroup.FOOD).food(new FoodComponent.Builder().hunger(9).saturationModifier(1.1f).build()));
-    public static final Item MUTTON_SANDWICH = new fplus_items(new Item.Settings().group(ItemGroup.FOOD).food(new FoodComponent.Builder().hunger(8).saturationModifier(1f).build()));
-    public static final Item CHICKEN_SANDWICH = new fplus_items(new Item.Settings().group(ItemGroup.FOOD).food(new FoodComponent.Builder().hunger(8).saturationModifier(1f).build()));
-    public static final Item SALMON_SANDWICH = new fplus_items(new Item.Settings().group(ItemGroup.FOOD).food(new FoodComponent.Builder().hunger(8).saturationModifier(1f).build()));
-    public static final Item RABBIT_SANDWICH = new fplus_items(new Item.Settings().group(ItemGroup.FOOD).food(new FoodComponent.Builder().hunger(8).saturationModifier(1f).build()));
-    public static final Item FISH_SANDWICH = new fplus_items(new Item.Settings().group(ItemGroup.FOOD).food(new FoodComponent.Builder().hunger(8).saturationModifier(1f).build()));
-    public static final Item GOLD_BEETROOT = new fplus_items(new Item.Settings().group(ItemGroup.FOOD).food(new FoodComponent.Builder().hunger(6).saturationModifier(1.1f).build()));
-    public static final Item GOLD_POTATO = new fplus_items(new Item.Settings().group(ItemGroup.FOOD).food(new FoodComponent.Builder().hunger(6).saturationModifier(0.9f).build()));
-    public static final Item TOLCHONKA = new soup_item(new Item.Settings().group(ItemGroup.FOOD).maxCount(16).food(new FoodComponent.Builder().hunger(7).saturationModifier(0.8f).build()));
-    public static final Item VEGETABLE_SALAD = new soup_item(new Item.Settings().group(ItemGroup.FOOD).maxCount(16).food(new FoodComponent.Builder().hunger(6).saturationModifier(0.7f).build()));
-    public static final Item MEAT_PIE = new fplus_items(new Item.Settings().group(ItemGroup.FOOD).food(new FoodComponent.Builder().hunger(8).saturationModifier(1f).build()));
-    public static final Item APPLE_PIE = new fplus_items(new Item.Settings().group(ItemGroup.FOOD).food(new FoodComponent.Builder().hunger(7).saturationModifier(0.5f).build()));
-    public static final Item CARROT_PIE = new fplus_items(new Item.Settings().group(ItemGroup.FOOD).food(new FoodComponent.Builder().hunger(7).saturationModifier(0.6f).build()));
-    public static final Item SWEET_BERRIES_PIE = new fplus_items(new Item.Settings().group(ItemGroup.FOOD).food(new FoodComponent.Builder().hunger(6).saturationModifier(0.3f).build()));
-    public static final Item GLOW_BERRIES_PIE = new fplus_items(new Item.Settings().group(ItemGroup.FOOD).food(new FoodComponent.Builder().hunger(6).saturationModifier(0.3f).statusEffect(new StatusEffectInstance(StatusEffects.GLOWING, 20*6), 0.05f).build()));
-    public static final Item PUMKIN_SOUP = new soup_item(new Item.Settings().group(ItemGroup.FOOD).maxCount(16).food(new FoodComponent.Builder().hunger(6).saturationModifier(0.5f).build()));
-    public static final Item BANKA = new fplus_items(new Item.Settings().group(ItemGroup.MISC));
-    public static final Item VARENIE = new banka_item(new Item.Settings().group(ItemGroup.FOOD).maxCount(16).food(new FoodComponent.Builder().hunger(5).saturationModifier(0.3f).statusEffect(new StatusEffectInstance(StatusEffects.REGENERATION, 20*5), 0.10f).build()));
-    public static final Item GLOW_VARENIE = new banka_item(new Item.Settings().group(ItemGroup.FOOD).maxCount(16).food(new FoodComponent.Builder().hunger(5).saturationModifier(0.4f).statusEffect(new StatusEffectInstance(StatusEffects.GLOWING, 20*10), 0.05f).build()));
-    public static final Item APPLE_JUICE = new drink_item(new Item.Settings().group(ItemGroup.FOOD).maxCount(16).food(new FoodComponent.Builder().hunger(4).saturationModifier(0.1f).build()));
-    public static final Item BEETROOT_JUICE = new drink_item(new Item.Settings().group(ItemGroup.FOOD).maxCount(16).food(new FoodComponent.Builder().hunger(3).saturationModifier(0.1f).build()));
-    public static final Item CARROT_JUICE = new drink_item(new Item.Settings().group(ItemGroup.FOOD).maxCount(16).food(new FoodComponent.Builder().hunger(3).saturationModifier(0.1f).build()));
-    public static final Item GLOW_BERRIES_JUICE = new drink_item(new Item.Settings().group(ItemGroup.FOOD).maxCount(16).food(new FoodComponent.Builder().hunger(3).saturationModifier(0.1f).statusEffect(new StatusEffectInstance(StatusEffects.GLOWING, 20*5), 0.05f).build()));
-    public static final Item MELON_JUICE = new drink_item(new Item.Settings().group(ItemGroup.FOOD).maxCount(16).food(new FoodComponent.Builder().hunger(3).saturationModifier(0.1f).build()));
-    public static final Item MILK_SHAKE = new drink_item(new Item.Settings().group(ItemGroup.FOOD).maxCount(16).food(new FoodComponent.Builder().hunger(2).saturationModifier(0.1f).build()));
-    public static final Item SWEET_BERRIES_JUICE = new drink_item(new Item.Settings().group(ItemGroup.FOOD).maxCount(16).food(new FoodComponent.Builder().hunger(3).saturationModifier(0.1f).build()));
-    public static final Item COCOA_SHAKE = new drink_item(new Item.Settings().group(ItemGroup.FOOD).maxCount(16).food(new FoodComponent.Builder().hunger(3).saturationModifier(0.1f).build()));
-    public static final Item BERRY_COOKIE = new fplus_items(new Item.Settings().group(ItemGroup.FOOD).food(new FoodComponent.Builder().hunger(2).saturationModifier(0.1f).build()));
-    public static final Item GLOW_BERRY_COOKIE = new fplus_items(new Item.Settings().group(ItemGroup.FOOD).food(new FoodComponent.Builder().hunger(2).saturationModifier(0.1f).statusEffect(new StatusEffectInstance(StatusEffects.GLOWING, 20*5), 0.05f).build()));
-    public static final Item BEETROOT_COOKIE = new fplus_items(new Item.Settings().group(ItemGroup.FOOD).food(new FoodComponent.Builder().hunger(2).saturationModifier(0.2f).build()));
-    public static final Item CARROT_COOKIE = new fplus_items(new Item.Settings().group(ItemGroup.FOOD).food(new FoodComponent.Builder().hunger(2).saturationModifier(0.2f).build()));
-    public static final Item CARAMEL = new fplus_items(new Item.Settings().group(ItemGroup.FOOD).food(new FoodComponent.Builder().hunger(1).snack().build()));
-    public static final Item BLACK_CANDY = new fplus_items(new Item.Settings().group(ItemGroup.FOOD).food(new FoodComponent.Builder().hunger(2).saturationModifier(0.1f).snack().build()));
-    public static final Item BLUE_CANDY = new fplus_items(new Item.Settings().group(ItemGroup.FOOD).food(new FoodComponent.Builder().hunger(2).saturationModifier(0.1f).snack().build()));
-    public static final Item BROWN_CANDY = new fplus_items(new Item.Settings().group(ItemGroup.FOOD).food(new FoodComponent.Builder().hunger(2).saturationModifier(0.1f).snack().build()));
-    public static final Item CYAN_CANDY = new fplus_items(new Item.Settings().group(ItemGroup.FOOD).food(new FoodComponent.Builder().hunger(2).saturationModifier(0.1f).snack().build()));
-    public static final Item GRAY_CANDY = new fplus_items(new Item.Settings().group(ItemGroup.FOOD).food(new FoodComponent.Builder().hunger(2).saturationModifier(0.1f).snack().build()));
-    public static final Item GREEN_CANDY = new fplus_items(new Item.Settings().group(ItemGroup.FOOD).food(new FoodComponent.Builder().hunger(2).saturationModifier(0.1f).snack().build()));
-    public static final Item LIGHT_BLUE_CANDY = new fplus_items(new Item.Settings().group(ItemGroup.FOOD).food(new FoodComponent.Builder().hunger(2).saturationModifier(0.1f).snack().build()));
-    public static final Item LIGHT_GRAY_CANDY = new fplus_items(new Item.Settings().group(ItemGroup.FOOD).food(new FoodComponent.Builder().hunger(2).saturationModifier(0.1f).snack().build()));
-    public static final Item LIME_CANDY = new fplus_items(new Item.Settings().group(ItemGroup.FOOD).food(new FoodComponent.Builder().hunger(2).saturationModifier(0.1f).snack().build()));
-    public static final Item MAGENTA_CANDY = new fplus_items(new Item.Settings().group(ItemGroup.FOOD).food(new FoodComponent.Builder().hunger(2).saturationModifier(0.1f).snack().build()));
-    public static final Item ORANGE_CANDY = new fplus_items(new Item.Settings().group(ItemGroup.FOOD).food(new FoodComponent.Builder().hunger(2).saturationModifier(0.1f).snack().build()));
-    public static final Item PINK_CANDY = new fplus_items(new Item.Settings().group(ItemGroup.FOOD).food(new FoodComponent.Builder().hunger(2).saturationModifier(0.1f).snack().build()));
-    public static final Item PURPLE_CANDY = new fplus_items(new Item.Settings().group(ItemGroup.FOOD).food(new FoodComponent.Builder().hunger(2).saturationModifier(0.1f).snack().build()));
-    public static final Item RED_CANDY = new fplus_items(new Item.Settings().group(ItemGroup.FOOD).food(new FoodComponent.Builder().hunger(2).saturationModifier(0.1f).snack().build()));
-    public static final Item WHITE_CANDY = new fplus_items(new Item.Settings().group(ItemGroup.FOOD).food(new FoodComponent.Builder().hunger(2).saturationModifier(0.1f).snack().build()));
-    public static final Item YELLOW_CANDY = new fplus_items(new Item.Settings().group(ItemGroup.FOOD).food(new FoodComponent.Builder().hunger(2).saturationModifier(0.1f).snack().build()));
-    public static final Item RED_SUS_CANDY = new fplus_items(new Item.Settings().group(ItemGroup.FOOD).food(new FoodComponent.Builder().hunger(2).saturationModifier(0.1f).snack().build()));
-    public static final Item BAKED_FLESH = new fplus_items(new Item.Settings().group(ItemGroup.FOOD).food(new FoodComponent.Builder().hunger(4).saturationModifier(0.1f).statusEffect(new StatusEffectInstance(StatusEffects.HUNGER, 20*20), 0.45f).meat().build()));
-    public static final Item AD_SOUP = new soup_item(new Item.Settings().group(ItemGroup.FOOD).maxCount(16).food(new FoodComponent.Builder().hunger(3).saturationModifier(0.3f).statusEffect(new StatusEffectInstance(StatusEffects.NAUSEA, 20*15), 0.35f).statusEffect(new StatusEffectInstance(StatusEffects.WITHER, 20*5), 0.25f).build()));
-    public static final Item AWFUL_STEW = new soup_item(new Item.Settings().group(ItemGroup.FOOD).maxCount(16).food(new FoodComponent.Builder().hunger(4).saturationModifier(0.3f).statusEffect(new StatusEffectInstance(StatusEffects.POISON, 20*5), 0.50f).statusEffect(new StatusEffectInstance(StatusEffects.HUNGER, 20*20), 0.50f).build()));
-    public static final Item FRIED_PUMKIN_SEED = new fplus_items(new Item.Settings().group(ItemGroup.FOOD).food(new FoodComponent.Builder().hunger(1).saturationModifier(0.1f).snack().build()));
-    public static final Item FRIED_MUSHROOM1 = new fplus_items(new Item.Settings().group(ItemGroup.FOOD).food(new FoodComponent.Builder().hunger(1).saturationModifier(0.1f).snack().build()));
-    public static final Item FRIED_MUSHROOM2 = new fplus_items(new Item.Settings().group(ItemGroup.FOOD).food(new FoodComponent.Builder().hunger(1).saturationModifier(0.1f).statusEffect(new StatusEffectInstance(StatusEffects.POISON, 20*6), 0.20f).snack().build()));
+    public static final Item LICHEN = add("lichen", new FoodPlusItem(new Item.Settings().food(new FoodComponent.Builder().hunger(1).saturationModifier(0.1f).statusEffect(new StatusEffectInstance(StatusEffects.POISON, 20*4), 0.40f).snack().build())));
+    public static final Item LICHEN_BREAD = add("lichen_bread", new FoodPlusItem(new Item.Settings().food(new FoodComponent.Builder().hunger(4).saturationModifier(0.4f).build())));
+    public static final Item MILLED_LICHEN = add("milled_lichen", new FoodPlusItem(new Item.Settings().food(new FoodComponent.Builder().hunger(1).saturationModifier(0.1f).statusEffect(new StatusEffectInstance(StatusEffects.POISON, 20*4), 0.40f).snack().build())));
+    public static final Item SEA_SALAD = add("sea_salad", new SoupItem(new Item.Settings().food(new FoodComponent.Builder().hunger(3).saturationModifier(0.3f).build())));
+    public static final Item SUNFLOWER_SEEDS = add("sunflower_seeds", new FoodPlusItem(new Item.Settings().food(new FoodComponent.Builder().hunger(1).saturationModifier(0.1f).snack().build())));
+    public static final Item CARROT_BREAD = add("carrot_bread", new FoodPlusItem(new Item.Settings().food(new FoodComponent.Builder().hunger(4).saturationModifier(0.8f).build())));
+    public static final Item POTATO_BREAD = add("potato_bread", new FoodPlusItem(new Item.Settings().food(new FoodComponent.Builder().hunger(5).saturationModifier(0.7f).build())));
+    public static final Item BEET_BREAD = add("beet_bread", new FoodPlusItem(new Item.Settings().food(new FoodComponent.Builder().hunger(5).saturationModifier(0.7f).build())));
 
-    public static final Item CHOCOLATE = new fplus_items(new Item.Settings().group(ItemGroup.FOOD).food(new FoodComponent.Builder().hunger(3).saturationModifier(0.2f).build()));
-    public static final Item LICHEN = new fplus_items(new Item.Settings().group(ItemGroup.FOOD).food(new FoodComponent.Builder().hunger(1).saturationModifier(0.1f).statusEffect(new StatusEffectInstance(StatusEffects.POISON, 20*4), 0.40f).snack().build()));
-    public static final Item LICHEN_BREAD = new fplus_items(new Item.Settings().group(ItemGroup.FOOD).food(new FoodComponent.Builder().hunger(4).saturationModifier(0.4f).build()));
-    public static final Item MILLED_LICHEN = new fplus_items(new Item.Settings().group(ItemGroup.FOOD).food(new FoodComponent.Builder().hunger(1).saturationModifier(0.1f).statusEffect(new StatusEffectInstance(StatusEffects.POISON, 20*4), 0.40f).snack().build()));
-    public static final Item SEA_SALAD = new soup_item(new Item.Settings().group(ItemGroup.FOOD).food(new FoodComponent.Builder().hunger(3).saturationModifier(0.3f).build()));
-    public static final Item SUNFLOWER_SEEDS = new fplus_items(new Item.Settings().group(ItemGroup.FOOD).food(new FoodComponent.Builder().hunger(1).saturationModifier(0.1f).snack().build()));
-    public static final Item CARROT_BREAD = new fplus_items(new Item.Settings().group(ItemGroup.FOOD).food(new FoodComponent.Builder().hunger(4).saturationModifier(0.8f).build()));
-    public static final Item POTATO_BREAD = new fplus_items(new Item.Settings().group(ItemGroup.FOOD).food(new FoodComponent.Builder().hunger(5).saturationModifier(0.7f).build()));
-    public static final Item BEET_BREAD = new fplus_items(new Item.Settings().group(ItemGroup.FOOD).food(new FoodComponent.Builder().hunger(5).saturationModifier(0.7f).build()));
+    private static void addItemsToItemGroup()
+    {
+        ITEMS.forEach((id, item) -> addToItemGroup(Foodplus.FOODPLUS, item));
+    }
 
+    private static void addToItemGroup(ItemGroup group, Item item)
+    {
+        ItemGroupEvents.modifyEntriesEvent(group).register(entries -> entries.add(item));
+    }
 
-    public static void reg_items() {
+    private static <T extends Item> T add(String name, T item)
+    {
+        ITEMS.put(Foodplus.id(name), item);
+        return item;
+    }
 
-        Registry.register(Registry.ITEM, new Identifier("foodplusid", "beef_salad"), BEEF_SALAD);
-        Registry.register(Registry.ITEM, new Identifier("foodplusid", "pork_salad"), PORK_SALAD);
-        Registry.register(Registry.ITEM, new Identifier("foodplusid", "chicken_salad"), CHICKEN_SALAD);
-        Registry.register(Registry.ITEM, new Identifier("foodplusid", "fish_salad"), FISH_SALAD);
-        Registry.register(Registry.ITEM, new Identifier("foodplusid", "salmon_salad"), SALMON_SALAD);
-        Registry.register(Registry.ITEM, new Identifier("foodplusid", "mutton_salad"), MUTTON_SALAD);
-        Registry.register(Registry.ITEM, new Identifier("foodplusid", "rabbit_salad"), RABBIT_SALAD);
-        Registry.register(Registry.ITEM, new Identifier("foodplusid", "beef_sandwich"), BEEF_SANDWICH);
-        Registry.register(Registry.ITEM, new Identifier("foodplusid", "pork_sandwich"), PORK_SANDWICH);
-        Registry.register(Registry.ITEM, new Identifier("foodplusid", "mutton_sandwich"), MUTTON_SANDWICH);
-        Registry.register(Registry.ITEM, new Identifier("foodplusid", "chicken_sandwich"), CHICKEN_SANDWICH);
-        Registry.register(Registry.ITEM, new Identifier("foodplusid", "salmon_sandwich"), SALMON_SANDWICH);
-        Registry.register(Registry.ITEM, new Identifier("foodplusid", "rabbit_sandwich"), RABBIT_SANDWICH);
-        Registry.register(Registry.ITEM, new Identifier("foodplusid", "fish_sandwich"), FISH_SANDWICH);
-        Registry.register(Registry.ITEM, new Identifier("foodplusid", "gold_beetroot"), GOLD_BEETROOT);
-        Registry.register(Registry.ITEM, new Identifier("foodplusid", "gold_potato"), GOLD_POTATO);
-        Registry.register(Registry.ITEM, new Identifier("foodplusid", "tolchonka"), TOLCHONKA);
-        Registry.register(Registry.ITEM, new Identifier("foodplusid", "vegetable_salad"), VEGETABLE_SALAD);
-        Registry.register(Registry.ITEM, new Identifier("foodplusid", "apple_pie"), APPLE_PIE);
-        Registry.register(Registry.ITEM, new Identifier("foodplusid", "carrot_pie"), CARROT_PIE);
-        Registry.register(Registry.ITEM, new Identifier("foodplusid", "meat_pie"), MEAT_PIE);
-        Registry.register(Registry.ITEM, new Identifier("foodplusid", "sweet_berries_pie"), SWEET_BERRIES_PIE);
-        Registry.register(Registry.ITEM, new Identifier("foodplusid", "glow_berries_pie"), GLOW_BERRIES_PIE);
-        Registry.register(Registry.ITEM, new Identifier("foodplusid", "pumkin_soup"), PUMKIN_SOUP);
-        Registry.register(Registry.ITEM, new Identifier("foodplusid", "banka"), BANKA);
-        Registry.register(Registry.ITEM, new Identifier("foodplusid", "varenie"), VARENIE);
-        Registry.register(Registry.ITEM, new Identifier("foodplusid", "glow_varenie"), GLOW_VARENIE);
-        Registry.register(Registry.ITEM, new Identifier("foodplusid", "apple_juice"), APPLE_JUICE);
-        Registry.register(Registry.ITEM, new Identifier("foodplusid", "beetroot_juice"), BEETROOT_JUICE);
-        Registry.register(Registry.ITEM, new Identifier("foodplusid", "carrot_juice"), CARROT_JUICE);
-        Registry.register(Registry.ITEM, new Identifier("foodplusid", "glow_berries_juice"), GLOW_BERRIES_JUICE);
-        Registry.register(Registry.ITEM, new Identifier("foodplusid", "melon_juice"), MELON_JUICE);
-        Registry.register(Registry.ITEM, new Identifier("foodplusid", "milk_shake"), MILK_SHAKE);
-        Registry.register(Registry.ITEM, new Identifier("foodplusid", "sweet_berries_juice"), SWEET_BERRIES_JUICE);
-        Registry.register(Registry.ITEM, new Identifier("foodplusid", "cocoa_shake"), COCOA_SHAKE);
-        Registry.register(Registry.ITEM, new Identifier("foodplusid", "berri_cookie"), BERRY_COOKIE);
-        Registry.register(Registry.ITEM, new Identifier("foodplusid", "glow_berri_cookie"), GLOW_BERRY_COOKIE);
-        Registry.register(Registry.ITEM, new Identifier("foodplusid", "beetroot_cookie"), BEETROOT_COOKIE);
-        Registry.register(Registry.ITEM, new Identifier("foodplusid", "carrot_cookie"), CARROT_COOKIE);
-        Registry.register(Registry.ITEM, new Identifier("foodplusid", "caramel"), CARAMEL);
-        Registry.register(Registry.ITEM, new Identifier("foodplusid", "black_candy"), BLACK_CANDY);
-        Registry.register(Registry.ITEM, new Identifier("foodplusid", "blue_candy"), BLUE_CANDY);
-        Registry.register(Registry.ITEM, new Identifier("foodplusid", "brown_candy"), BROWN_CANDY);
-        Registry.register(Registry.ITEM, new Identifier("foodplusid", "cyan_candy"), CYAN_CANDY);
-        Registry.register(Registry.ITEM, new Identifier("foodplusid", "gray_candy"), GRAY_CANDY);
-        Registry.register(Registry.ITEM, new Identifier("foodplusid", "green_candy"), GREEN_CANDY);
-        Registry.register(Registry.ITEM, new Identifier("foodplusid", "light_blue_candy"), LIGHT_BLUE_CANDY);
-        Registry.register(Registry.ITEM, new Identifier("foodplusid", "light_gray_candy"), LIGHT_GRAY_CANDY);
-        Registry.register(Registry.ITEM, new Identifier("foodplusid", "lime_candy"), LIME_CANDY);
-        Registry.register(Registry.ITEM, new Identifier("foodplusid", "magenta_candy"), MAGENTA_CANDY);
-        Registry.register(Registry.ITEM, new Identifier("foodplusid", "orange_candy"), ORANGE_CANDY);
-        Registry.register(Registry.ITEM, new Identifier("foodplusid", "pink_candy"), PINK_CANDY);
-        Registry.register(Registry.ITEM, new Identifier("foodplusid", "purple_candy"), PURPLE_CANDY);
-        Registry.register(Registry.ITEM, new Identifier("foodplusid", "red_candy"), RED_CANDY);
-        Registry.register(Registry.ITEM, new Identifier("foodplusid", "white_candy"), WHITE_CANDY);
-        Registry.register(Registry.ITEM, new Identifier("foodplusid", "yellow_candy"), YELLOW_CANDY);
-        Registry.register(Registry.ITEM, new Identifier("foodplusid", "red_sus_candy"), RED_SUS_CANDY);
-        Registry.register(Registry.ITEM, new Identifier("foodplusid", "baked_flesh"), BAKED_FLESH);
-        Registry.register(Registry.ITEM, new Identifier("foodplusid", "ad_soup"), AD_SOUP);
-        Registry.register(Registry.ITEM, new Identifier("foodplusid", "awful_stew"), AWFUL_STEW);
-        Registry.register(Registry.ITEM, new Identifier("foodplusid", "fried_pumkin_seed"), FRIED_PUMKIN_SEED);
-        Registry.register(Registry.ITEM, new Identifier("foodplusid", "fried_mushroom1"), FRIED_MUSHROOM1);
-        Registry.register(Registry.ITEM, new Identifier("foodplusid", "fried_mushroom2"), FRIED_MUSHROOM2);
-
-        Registry.register(Registry.ITEM, new Identifier("foodplusid", "chocolate"), CHOCOLATE);
-        Registry.register(Registry.ITEM, new Identifier("foodplusid", "lichen"), LICHEN);
-        Registry.register(Registry.ITEM, new Identifier("foodplusid", "lichen_bread"), LICHEN_BREAD);
-        Registry.register(Registry.ITEM, new Identifier("foodplusid", "milled_lichen"), MILLED_LICHEN);
-        Registry.register(Registry.ITEM, new Identifier("foodplusid", "sea_salad"), SEA_SALAD);
-        Registry.register(Registry.ITEM, new Identifier("foodplusid", "sunflower_seeds"), SUNFLOWER_SEEDS);
-        Registry.register(Registry.ITEM, new Identifier("foodplusid", "carrot_bread"), CARROT_BREAD);
-        Registry.register(Registry.ITEM, new Identifier("foodplusid", "potato_bread"), POTATO_BREAD);
-        Registry.register(Registry.ITEM, new Identifier("foodplusid", "beet_bread"), BEET_BREAD);
-
-
+    public static void init()
+    {
+        ITEMS.forEach((id, item) -> Registry.register(Registries.ITEM, id, item));
+        addItemsToItemGroup();
     }
 }
