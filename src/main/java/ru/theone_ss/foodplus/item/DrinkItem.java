@@ -1,4 +1,4 @@
-package ru.theone_ss.foodplus.mod_food;
+package ru.theone_ss.foodplus.item;
 
 import net.minecraft.advancement.criterion.Criteria;
 import net.minecraft.entity.LivingEntity;
@@ -16,29 +16,34 @@ import net.minecraft.util.TypedActionResult;
 import net.minecraft.util.UseAction;
 import net.minecraft.world.World;
 
-public class drink_item extends Item {
+public class DrinkItem extends Item {
 
-    public drink_item(Settings settings) {
+    public DrinkItem(Settings settings) {
         super(settings);
     }
 
-    public ItemStack finishUsing(ItemStack stack, World world, LivingEntity user) {
+    public ItemStack finishUsing(ItemStack stack, World world, LivingEntity user)
+    {
         super.finishUsing(stack, world, user);
-        if (user instanceof ServerPlayerEntity serverPlayerEntity) {
+        if (user instanceof ServerPlayerEntity serverPlayerEntity)
+        {
             Criteria.CONSUME_ITEM.trigger(serverPlayerEntity, stack);
             serverPlayerEntity.incrementStat(Stats.USED.getOrCreateStat(this));
         }
-
-        if (stack.isEmpty()) {
+        if (stack.isEmpty())
+        {
             return new ItemStack(Items.GLASS_BOTTLE);
-        } else {
-            if (user instanceof PlayerEntity playerEntity && !((PlayerEntity)user).getAbilities().creativeMode) {
+        }
+        else
+        {
+            if (user instanceof PlayerEntity playerEntity && !((PlayerEntity)user).getAbilities().creativeMode)
+            {
                 ItemStack itemStack = new ItemStack(Items.GLASS_BOTTLE);
-                if (!playerEntity.getInventory().insertStack(itemStack)) {
+                if (!playerEntity.getInventory().insertStack(itemStack))
+                {
                     playerEntity.dropItem(itemStack, false);
                 }
             }
-
             return stack;
         }
     }

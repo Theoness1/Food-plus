@@ -20,19 +20,18 @@ public class GlowLichenMixin {
 
     @Inject(at = @At("HEAD"), method = "onBroken")
 
-    private void onBroken(WorldAccess world, BlockPos pos, BlockState state, CallbackInfo ci) {
-        if(state.isOf(Blocks.GLOW_LICHEN)) {
-
+    private void onBroken(WorldAccess world, BlockPos pos, BlockState state, CallbackInfo ci)
+    {
+        if(state.isOf(Blocks.GLOW_LICHEN))
+        {
             Random random = new Random();
             int i = random.nextInt(3);
-
-            if(i == 0) {
-
+            if(i == 0)
+            {
                 Block.dropStack((World)world, pos, new ItemStack(FoodItems.LICHEN));
             }
-
-            if(i == 2) {
-
+            if(i == 2)
+            {
                 Block.dropStack((World)world, pos, new ItemStack(FoodItems.LICHEN, 2));
             }
 

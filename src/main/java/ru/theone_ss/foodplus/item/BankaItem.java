@@ -1,4 +1,4 @@
-package ru.theone_ss.foodplus.mod_food;
+package ru.theone_ss.foodplus.item;
 
 import ru.theone_ss.foodplus.registry.FoodItems;
 import net.minecraft.advancement.criterion.Criteria;
@@ -16,29 +16,34 @@ import net.minecraft.util.TypedActionResult;
 import net.minecraft.util.UseAction;
 import net.minecraft.world.World;
 
-public class banka_item extends Item {
+public class BankaItem extends Item {
 
-    public banka_item(Settings settings) {
+    public BankaItem(Settings settings) {
         super(settings);
     }
 
-    public ItemStack finishUsing(ItemStack stack, World world, LivingEntity user) {
+    public ItemStack finishUsing(ItemStack stack, World world, LivingEntity user)
+    {
         super.finishUsing(stack, world, user);
-        if (user instanceof ServerPlayerEntity serverPlayerEntity) {
+        if (user instanceof ServerPlayerEntity serverPlayerEntity)
+        {
             Criteria.CONSUME_ITEM.trigger(serverPlayerEntity, stack);
             serverPlayerEntity.incrementStat(Stats.USED.getOrCreateStat(this));
         }
-
-        if (stack.isEmpty()) {
+        if (stack.isEmpty())
+        {
             return new ItemStack(FoodItems.BANKA);
-        } else {
-            if (user instanceof PlayerEntity playerEntity && !((PlayerEntity)user).getAbilities().creativeMode) {
+        }
+        else
+        {
+            if (user instanceof PlayerEntity playerEntity && !((PlayerEntity)user).getAbilities().creativeMode)
+            {
                 ItemStack itemStack = new ItemStack(FoodItems.BANKA);
-                if (!playerEntity.getInventory().insertStack(itemStack)) {
+                if (!playerEntity.getInventory().insertStack(itemStack))
+                {
                     playerEntity.dropItem(itemStack, false);
                 }
             }
-
             return stack;
         }
     }
