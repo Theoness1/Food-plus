@@ -5,6 +5,7 @@ import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
+import ru.theone_ss.foodplus.registry.FoodBlocks;
 import ru.theone_ss.foodplus.registry.FoodItems;
 
 public class Foodplus implements ModInitializer {
@@ -16,6 +17,7 @@ public class Foodplus implements ModInitializer {
 	{
 		registerItemGroup();
 		FoodItems.init();
+		FoodBlocks.init();
 	}
 	public static void registerItemGroup()
 	{
