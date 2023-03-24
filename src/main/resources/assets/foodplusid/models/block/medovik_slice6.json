@@ -1,0 +1,22 @@
+{
+  "textures": {
+    "particle": "foodplusid:block/medovik_side",
+    "bottom": "foodplusid:block/medovik_bottom",
+    "top": "foodplusid:block/medovik_top",
+    "side": "foodplusid:block/medovik_side",
+    "inside": "foodplusid:block/medovik_inner"
+  },
+  "elements": [
+    {   "from": [ 13, 0, 1 ],
+      "to": [ 15, 12, 15 ],
+      "faces": {
+        "down":  { "texture": "#bottom", "cullface": "down" },
+        "up":    { "texture": "#top" },
+        "north": { "texture": "#side" },
+        "south": { "texture": "#side" },
+        "west":  { "texture": "#inside" },
+        "east":  { "texture": "#side" }
+      }
+    }
+  ]
+}
