@@ -71,5 +71,16 @@
   "item.foodplusid.sunflower_seeds": "Sunflower seeds",
   "item.foodplusid.carrot_bread": "Carrot bread",
   "item.foodplusid.potato_bread": "Potato bread",
-  "item.foodplusid.beet_bread": "Beet bread"
+  "item.foodplusid.beet_bread": "Beet bread",
+
+  "item.foodplusid.root": "Root",
+  "item.foodplusid.raw_frog_leg": "Raw Frog Leg",
+  "item.foodplusid.cooked_frog_leg": "Cooked Frog Leg",
+  "item.foodplusid.raw_stride": "Raw Stride",
+  "item.foodplusid.cooked_stride": "Cooked Stride",
+  "block.foodplusid.medovik": "Medovik",
+  "item.foodplusid.medovik_slice": "Medovik Slice",
+  "item.foodplusid.bee_pill": "Bee Pill",
+  "item.foodplusid.honey_cookie": "Honey Cookie",
+  "item.foodplusid.honey_gum": "Honey Gum"
 }

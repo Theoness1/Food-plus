@@ -71,5 +71,16 @@
   "item.foodplusid.sunflower_seeds": "Семечки",
   "item.foodplusid.carrot_bread": "Морковный хлеб",
   "item.foodplusid.potato_bread": "Картофельный хлеб",
-  "item.foodplusid.beet_bread": "Свекольный хлеб"
+  "item.foodplusid.beet_bread": "Свекольный хлеб",
+
+  "item.foodplusid.root": "Корень",
+  "item.foodplusid.raw_frog_leg": "Лягушачья лапка",
+  "item.foodplusid.cooked_frog_leg": "Жареная лягушачья лапка",
+  "item.foodplusid.raw_stride": "Сырой страйд",
+  "item.foodplusid.cooked_stride": "Жареный страйд",
+  "block.foodplusid.medovik": "Медовик",
+  "item.foodplusid.medovik_slice": "Кусочек Медовика",
+  "item.foodplusid.bee_pill": "Пчелиная таблетка",
+  "item.foodplusid.honey_cookie": "Медовая печенька",
+  "item.foodplusid.honey_gum": "Медовая жвачка"
 }
