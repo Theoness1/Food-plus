@@ -1,7 +1,7 @@
 package ru.theone_ss.foodplus.registry;
 
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
-import net.minecraft.item.ItemGroup;
+import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import ru.theone_ss.foodplus.Foodplus;
@@ -11,8 +11,6 @@ import ru.theone_ss.foodplus.item.SoupItem;
 import ru.theone_ss.foodplus.item.FoodPlusItem;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
-import net.minecraft.item.FoodComponent;
-import net.minecraft.item.Item;
 import net.minecraft.util.Identifier;
 
 import java.util.LinkedHashMap;
@@ -45,8 +43,8 @@ public class FoodItems {
     public static final Item GLOW_BERRIES_PIE = add("glow_berries_pie", new FoodPlusItem(new Item.Settings().food(new FoodComponent.Builder().hunger(6).saturationModifier(0.3f).statusEffect(new StatusEffectInstance(StatusEffects.GLOWING, 20*6), 0.05f).build())));
     public static final Item PUMPKIN_SOUP = add("pumpkin_soup", new SoupItem(new Item.Settings().maxCount(16).food(new FoodComponent.Builder().hunger(6).saturationModifier(0.5f).build())));
     public static final Item BANKA = add("banka", new FoodPlusItem(new Item.Settings()));
-    public static final Item VARENIE = add("varenie", new BankaItem(new Item.Settings().maxCount(16).food(new FoodComponent.Builder().hunger(5).saturationModifier(0.3f).statusEffect(new StatusEffectInstance(StatusEffects.REGENERATION, 20*5), 0.10f).build())));
-    public static final Item GLOW_VARENIE = add("glow_varenie", new BankaItem(new Item.Settings().maxCount(16).food(new FoodComponent.Builder().hunger(5).saturationModifier(0.4f).statusEffect(new StatusEffectInstance(StatusEffects.GLOWING, 20*10), 0.05f).build())));
+    public static final Item VARENIE = add("varenie", new BankaItem(new Item.Settings().maxCount(16).food(new FoodComponent.Builder().hunger(5).saturationModifier(0.3f).statusEffect(new StatusEffectInstance(StatusEffects.REGENERATION, 20*5), 0.25f).build())));
+    public static final Item GLOW_VARENIE = add("glow_varenie", new BankaItem(new Item.Settings().maxCount(16).food(new FoodComponent.Builder().hunger(5).saturationModifier(0.4f).statusEffect(new StatusEffectInstance(StatusEffects.GLOWING, 20*10), 0.25f).build())));
     public static final Item APPLE_JUICE = add("apple_juice", new DrinkItem(new Item.Settings().maxCount(16).food(new FoodComponent.Builder().hunger(4).saturationModifier(0.1f).build())));
     public static final Item BEETROOT_JUICE = add("beetroot_juice", new DrinkItem(new Item.Settings().maxCount(16).food(new FoodComponent.Builder().hunger(3).saturationModifier(0.1f).build())));
     public static final Item CARROT_JUICE = add("carrot_juice", new DrinkItem(new Item.Settings().maxCount(16).food(new FoodComponent.Builder().hunger(3).saturationModifier(0.1f).build())));
@@ -93,6 +91,16 @@ public class FoodItems {
     public static final Item CARROT_BREAD = add("carrot_bread", new FoodPlusItem(new Item.Settings().food(new FoodComponent.Builder().hunger(4).saturationModifier(0.8f).build())));
     public static final Item POTATO_BREAD = add("potato_bread", new FoodPlusItem(new Item.Settings().food(new FoodComponent.Builder().hunger(5).saturationModifier(0.7f).build())));
     public static final Item BEET_BREAD = add("beet_bread", new FoodPlusItem(new Item.Settings().food(new FoodComponent.Builder().hunger(5).saturationModifier(0.7f).build())));
+    public static final Item ROOT = add("root", new FoodPlusItem(new Item.Settings().food(new FoodComponent.Builder().hunger(1).saturationModifier(0.1f).snack().build())));
+    public static final Item RAW_FROG_LEG = add("raw_frog_leg", new FoodPlusItem(new Item.Settings().food(new FoodComponent.Builder().hunger(2).saturationModifier(0.1f).build())));
+    public static final Item COOKED_FROG_LEG = add("cooked_frog_leg", new FoodPlusItem(new Item.Settings().food(new FoodComponent.Builder().hunger(4).saturationModifier(0.3f).build())));
+    public static final Item RAW_STRIDE = add("raw_stride", new FoodPlusItem(new Item.Settings().food(new FoodComponent.Builder().hunger(3).saturationModifier(0.2f).statusEffect(new StatusEffectInstance(StatusEffects.FIRE_RESISTANCE, 20*12), 0.45f).build())));
+    public static final Item COOKED_STRIDE = add("cooked_stride", new FoodPlusItem(new Item.Settings().food(new FoodComponent.Builder().hunger(6).saturationModifier(0.4f).statusEffect(new StatusEffectInstance(StatusEffects.FIRE_RESISTANCE, 20*12), 0.45f).build())));
+    public static final BlockItem MEDOVIK = add("medovik", new BlockItem(FoodBlocks.MEDOVIK, new Item.Settings().maxCount(1)));
+    public static final Item MEDOVIK_SLICE = add("medovik_slice", new FoodPlusItem(new Item.Settings().food(new FoodComponent.Builder().hunger(3).saturationModifier(0.2f).build())));
+    public static final Item BEE_PILL = add("bee_pill", new FoodPlusItem(new Item.Settings().food(new FoodComponent.Builder().hunger(2).saturationModifier(0.2f).alwaysEdible().statusEffect(new StatusEffectInstance(StatusEffects.INSTANT_HEALTH, 1), 0.45f).build())));
+    public static final Item HONEY_COOKIE = add("honey_cookie", new FoodPlusItem(new Item.Settings().food(new FoodComponent.Builder().hunger(4).saturationModifier(0.3f).build())));
+    public static final Item HONEY_GUM = add("honey_gum", new FoodPlusItem(new Item.Settings().food(new FoodComponent.Builder().hunger(2).saturationModifier(0.1f).build())));
 
     private static void addItemsToItemGroup()
     {
