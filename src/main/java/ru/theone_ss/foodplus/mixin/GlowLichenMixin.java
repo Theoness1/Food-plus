@@ -13,28 +13,16 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import ru.theone_ss.foodplus.registry.FoodItems;
 
-import java.util.Random;
+import java.util.random.RandomGenerator;
 
 @Mixin(Block.class)
-public class GlowLichenMixin {
-
+abstract class GlowLichenMixin {
     @Inject(at = @At("HEAD"), method = "onBroken")
-
     private void onBroken(WorldAccess world, BlockPos pos, BlockState state, CallbackInfo ci)
     {
-        if(state.isOf(Blocks.GLOW_LICHEN))
+        if(!world.isClient() && state.isOf(Blocks.GLOW_LICHEN))
         {
-            Random random = new Random();
-            int i = random.nextInt(3);
-            if(i == 0)
-            {
-                Block.dropStack((World)world, pos, new ItemStack(FoodItems.LICHEN));
-            }
-            if(i == 2)
-            {
-                Block.dropStack((World)world, pos, new ItemStack(FoodItems.LICHEN, 2));
-            }
-
+            Block.dropStack((World)world, pos, new ItemStack(FoodItems.LICHEN, RandomGenerator.getDefault().nextInt(1, 3)));
         }
     }
 
