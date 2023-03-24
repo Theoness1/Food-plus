@@ -91,6 +91,7 @@ public class FoodItems {
     public static final Item CARROT_BREAD = add("carrot_bread", new FoodPlusItem(new Item.Settings().food(new FoodComponent.Builder().hunger(4).saturationModifier(0.8f).build())));
     public static final Item POTATO_BREAD = add("potato_bread", new FoodPlusItem(new Item.Settings().food(new FoodComponent.Builder().hunger(5).saturationModifier(0.7f).build())));
     public static final Item BEET_BREAD = add("beet_bread", new FoodPlusItem(new Item.Settings().food(new FoodComponent.Builder().hunger(5).saturationModifier(0.7f).build())));
+
     public static final Item ROOT = add("root", new FoodPlusItem(new Item.Settings().food(new FoodComponent.Builder().hunger(1).saturationModifier(0.1f).snack().build())));
     public static final Item RAW_FROG_LEG = add("raw_frog_leg", new FoodPlusItem(new Item.Settings().food(new FoodComponent.Builder().hunger(2).saturationModifier(0.1f).build())));
     public static final Item COOKED_FROG_LEG = add("cooked_frog_leg", new FoodPlusItem(new Item.Settings().food(new FoodComponent.Builder().hunger(4).saturationModifier(0.3f).build())));
