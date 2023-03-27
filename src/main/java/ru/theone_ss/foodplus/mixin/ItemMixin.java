@@ -1,11 +1,11 @@
 package ru.theone_ss.foodplus.mixin;
 
-import net.fabricmc.fabric.api.tag.convention.v1.ConventionalItemTags;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.*;
+import net.minecraft.registry.tag.ItemTags;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.ActionResult;
@@ -29,7 +29,7 @@ abstract class ItemMixin
         BlockPos blockPos = context.getBlockPos();
         PlayerEntity playerEntity = context.getPlayer();
         BlockState blockState = context.getWorld().getBlockState(blockPos);
-        if(!world.isClient && blockState.isOf(Blocks.MANGROVE_ROOTS) && playerEntity.getStackInHand(context.getHand()).isIn(ConventionalItemTags.SWORDS))
+        if(!world.isClient && blockState.isOf(Blocks.MANGROVE_ROOTS) && playerEntity.getStackInHand(context.getHand()).isIn(ItemTags.SWORDS))
         {
             ItemStack stack = playerEntity.getStackInHand(context.getHand());
             stack.setDamage(stack.getDamage()+1);
