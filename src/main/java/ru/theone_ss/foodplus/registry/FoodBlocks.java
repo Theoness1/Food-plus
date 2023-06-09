@@ -9,7 +9,7 @@ import ru.theone_ss.foodplus.block.MedovikBlock;
 
 public class FoodBlocks
 {
-    public static final Block MEDOVIK = new MedovikBlock(AbstractBlock.Settings.of(Material.CAKE).strength(0.5F).sounds(BlockSoundGroup.WOOL));
+    public static final Block MEDOVIK = new MedovikBlock(AbstractBlock.Settings.create().solid().strength(0.5F).sounds(BlockSoundGroup.WOOL));
 
     public static void init()
     {

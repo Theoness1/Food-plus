@@ -1,6 +1,5 @@
 package ru.theone_ss.foodplus.registry;
 
-import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
@@ -103,16 +102,6 @@ public class FoodItems {
     public static final Item HONEY_COOKIE = add("honey_cookie", new FoodPlusItem(new Item.Settings().food(new FoodComponent.Builder().hunger(4).saturationModifier(0.3f).build())));
     public static final Item HONEY_GUM = add("honey_gum", new FoodPlusItem(new Item.Settings().food(new FoodComponent.Builder().hunger(2).saturationModifier(0.1f).build())));
 
-    private static void addItemsToItemGroup()
-    {
-        ITEMS.forEach((id, item) -> addToItemGroup(Foodplus.FOODPLUS, item));
-    }
-
-    private static void addToItemGroup(ItemGroup group, Item item)
-    {
-        ItemGroupEvents.modifyEntriesEvent(group).register(entries -> entries.add(item));
-    }
-
     private static <T extends Item> T add(String name, T item)
     {
         ITEMS.put(Foodplus.id(name), item);
@@ -122,6 +111,5 @@ public class FoodItems {
     public static void init()
     {
         ITEMS.forEach((id, item) -> Registry.register(Registries.ITEM, id, item));
-        addItemsToItemGroup();
     }
 }
