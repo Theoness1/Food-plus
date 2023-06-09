@@ -68,7 +68,7 @@ public class MedovikBlock extends CakeBlock {
     }
 
     public boolean canPlaceAt(BlockState state, WorldView world, BlockPos pos) {
-        return world.getBlockState(pos.down()).getMaterial().isSolid();
+        return world.getBlockState(pos.down()).isSolid();
     }
 
     protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
