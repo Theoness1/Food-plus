@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:smelting",
+  "category": "food",
+  "cookingtime": 200,
+  "experience": 0.35,
+  "ingredient": {
+    "item": "foodplusid:raw_sniffer_meat"
+  },
+  "result": "foodplusid:cooked_sniffer_meat"
+}

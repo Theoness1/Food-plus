@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "minecraft:gold_block"
+    },
+    "T": {
+      "item": "foodplusid:turnip"
+    }
+  },
+  "pattern": [
+    "###",
+    "#T#",
+    "###"
+  ],
+  "result": {
+    "item": "foodplusid:golden_turnip",
+    "count": 1
+  },
+  "show_notification": true
+}
