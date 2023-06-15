@@ -69,6 +69,7 @@
   "item.foodplusid.milled_lichen": "Молотых мох",
   "item.foodplusid.sea_salad": "Салат из ламинария",
   "item.foodplusid.sunflower_seeds": "Семечки",
+  "item.foodplusid.fried_sunflower_seeds": "Жареные семечки",
   "item.foodplusid.carrot_bread": "Морковный хлеб",
   "item.foodplusid.potato_bread": "Картофельный хлеб",
   "item.foodplusid.beet_bread": "Свекольный хлеб",
@@ -82,5 +83,11 @@
   "item.foodplusid.medovik_slice": "Кусочек Медовика",
   "item.foodplusid.bee_pill": "Пчелиная таблетка",
   "item.foodplusid.honey_cookie": "Медовая печенька",
-  "item.foodplusid.honey_gum": "Медовая жвачка"
+  "item.foodplusid.honey_gum": "Медовая жвачка",
+
+  "item.foodplusid.turnip": "Репа",
+  "item.foodplusid.golden_turnip": "Золотая репа",
+  "item.foodplusid.raw_sniffer_meat": "Сырой сниффер",
+  "item.foodplusid.cooked_sniffer_meat": "Приготовленный сниффер",
+  "item.foodplusid.hot_stuff": "Горячая штучка"
 }
