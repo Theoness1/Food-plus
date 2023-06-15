@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:smoking",
+  "category": "food",
+  "cookingtime": 100,
+  "experience": 0.20,
+  "ingredient": {
+    "item": "minecraft:brown_mushroom"
+  },
+  "result": "foodplusid:fried_mushroom1"
+}
