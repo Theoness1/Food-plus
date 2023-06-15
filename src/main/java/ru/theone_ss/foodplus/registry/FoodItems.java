@@ -1,13 +1,13 @@
 package ru.theone_ss.foodplus.registry;
 
+import net.minecraft.entity.attribute.EntityAttributeModifier;
+import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
+import net.minecraft.util.Rarity;
 import ru.theone_ss.foodplus.Foodplus;
-import ru.theone_ss.foodplus.item.BankaItem;
-import ru.theone_ss.foodplus.item.DrinkItem;
-import ru.theone_ss.foodplus.item.SoupItem;
-import ru.theone_ss.foodplus.item.FoodPlusItem;
+import ru.theone_ss.foodplus.item.*;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.util.Identifier;
@@ -87,20 +87,32 @@ public class FoodItems {
     public static final Item MILLED_LICHEN = add("milled_lichen", new FoodPlusItem(new Item.Settings().food(new FoodComponent.Builder().hunger(1).saturationModifier(0.1f).statusEffect(new StatusEffectInstance(StatusEffects.POISON, 20*4), 0.40f).snack().build())));
     public static final Item SEA_SALAD = add("sea_salad", new SoupItem(new Item.Settings().food(new FoodComponent.Builder().hunger(3).saturationModifier(0.3f).build())));
     public static final Item SUNFLOWER_SEEDS = add("sunflower_seeds", new FoodPlusItem(new Item.Settings().food(new FoodComponent.Builder().hunger(1).saturationModifier(0.1f).snack().build())));
+    public static final Item FRIED_SUNFLOWER_SEEDS = add("fried_sunflower_seeds", new FoodPlusItem(new Item.Settings().food(new FoodComponent.Builder().hunger(2).saturationModifier(0.1f).snack().build())));
     public static final Item CARROT_BREAD = add("carrot_bread", new FoodPlusItem(new Item.Settings().food(new FoodComponent.Builder().hunger(4).saturationModifier(0.8f).build())));
     public static final Item POTATO_BREAD = add("potato_bread", new FoodPlusItem(new Item.Settings().food(new FoodComponent.Builder().hunger(5).saturationModifier(0.7f).build())));
     public static final Item BEET_BREAD = add("beet_bread", new FoodPlusItem(new Item.Settings().food(new FoodComponent.Builder().hunger(5).saturationModifier(0.7f).build())));
 
     public static final Item ROOT = add("root", new FoodPlusItem(new Item.Settings().food(new FoodComponent.Builder().hunger(1).saturationModifier(0.1f).snack().build())));
-    public static final Item RAW_FROG_LEG = add("raw_frog_leg", new FoodPlusItem(new Item.Settings().food(new FoodComponent.Builder().hunger(2).saturationModifier(0.1f).build())));
-    public static final Item COOKED_FROG_LEG = add("cooked_frog_leg", new FoodPlusItem(new Item.Settings().food(new FoodComponent.Builder().hunger(4).saturationModifier(0.3f).build())));
-    public static final Item RAW_STRIDE = add("raw_stride", new FoodPlusItem(new Item.Settings().food(new FoodComponent.Builder().hunger(3).saturationModifier(0.2f).statusEffect(new StatusEffectInstance(StatusEffects.FIRE_RESISTANCE, 20*12), 0.50f).build())));
-    public static final Item COOKED_STRIDE = add("cooked_stride", new FoodPlusItem(new Item.Settings().food(new FoodComponent.Builder().hunger(6).saturationModifier(0.4f).statusEffect(new StatusEffectInstance(StatusEffects.FIRE_RESISTANCE, 20*12), 0.50f).build())));
+    public static final Item RAW_FROG_LEG = add("raw_frog_leg", new FoodPlusItem(new Item.Settings().food(new FoodComponent.Builder().hunger(2).saturationModifier(0.1f).meat().build())));
+    public static final Item COOKED_FROG_LEG = add("cooked_frog_leg", new FoodPlusItem(new Item.Settings().food(new FoodComponent.Builder().hunger(4).saturationModifier(0.3f).meat().build())));
+    public static final Item RAW_STRIDE = add("raw_stride", new FoodPlusItem(new Item.Settings().food(new FoodComponent.Builder().hunger(3).saturationModifier(0.2f).statusEffect(new StatusEffectInstance(StatusEffects.FIRE_RESISTANCE, 20*12), 0.50f).meat().build())));
+    public static final Item COOKED_STRIDE = add("cooked_stride", new FoodPlusItem(new Item.Settings().food(new FoodComponent.Builder().hunger(6).saturationModifier(0.4f).statusEffect(new StatusEffectInstance(StatusEffects.FIRE_RESISTANCE, 20*12), 0.50f).meat().build())));
     public static final BlockItem MEDOVIK = add("medovik", new BlockItem(FoodBlocks.MEDOVIK, new Item.Settings().maxCount(1)));
     public static final Item MEDOVIK_SLICE = add("medovik_slice", new FoodPlusItem(new Item.Settings().food(new FoodComponent.Builder().hunger(3).saturationModifier(0.2f).build())));
     public static final Item BEE_PILL = add("bee_pill", new FoodPlusItem(new Item.Settings().food(new FoodComponent.Builder().hunger(2).saturationModifier(0.2f).alwaysEdible().statusEffect(new StatusEffectInstance(StatusEffects.INSTANT_HEALTH, 1), 0.45f).build())));
     public static final Item HONEY_COOKIE = add("honey_cookie", new FoodPlusItem(new Item.Settings().food(new FoodComponent.Builder().hunger(4).saturationModifier(0.3f).build())));
     public static final Item HONEY_GUM = add("honey_gum", new FoodPlusItem(new Item.Settings().food(new FoodComponent.Builder().hunger(2).saturationModifier(0.1f).build())));
+
+    public static final Item TURNIP = add("turnip", new FoodPlusItem(new Item.Settings().food(new FoodComponent.Builder().hunger(9).saturationModifier(0.9f).build())));
+    public static final Item GOLDEN_TURNIP = add("golden_turnip", new FoodPlusItem(new Item.Settings().rarity(Rarity.EPIC).food(new FoodComponent.Builder().hunger(13).saturationModifier(1.4f)
+            .statusEffect(new StatusEffectInstance(StatusEffects.REGENERATION, 100 * 12, 1), 1f)
+            .statusEffect(new StatusEffectInstance(StatusEffects.ABSORPTION
+                    .addAttributeModifier(EntityAttributes.GENERIC_MAX_HEALTH, "5D6F0BA2-1186-46AC-B896-C61C5CEE99CC", 6.0, EntityAttributeModifier.Operation.ADDITION), 600 * 20), 1f) // пока действует ABSORPTION, будет 3 доп хп
+            .statusEffect(new StatusEffectInstance(StatusEffects.STRENGTH, 200 * 20), 1f).alwaysEdible().build())));
+    public static final Item RAW_SNIFFER_MEAT = add("raw_sniffer_meat", new FoodPlusItem(new Item.Settings().food(new FoodComponent.Builder().hunger(4).saturationModifier(0.4f).meat().build())));
+    public static final Item COOKED_SNIFFER_MEAT = add("cooked_sniffer_meat", new FoodPlusItem(new Item.Settings().food(new FoodComponent.Builder().hunger(9).saturationModifier(0.9f).meat().build())));
+    public static final Item HOT_STUFF = add("hot_stuff", new HotStuffItem(new Item.Settings().maxCount(16).food(new FoodComponent.Builder().hunger(9).saturationModifier(0.7f)
+            .statusEffect(new StatusEffectInstance(StatusEffects.FIRE_RESISTANCE, 20 * 12), 1f).build())));
 
     private static <T extends Item> T add(String name, T item)
     {
