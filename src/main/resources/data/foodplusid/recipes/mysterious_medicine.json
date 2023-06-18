@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:torchflower"
+    },
+    {
+      "item": "minecraft:pitcher_plant"
+    },
+    {
+      "item": "minecraft:enchanted_golden_apple"
+    },
+    {
+      "item": "minecraft:milk_bucket"
+    },
+    {
+      "item": "foodplusid:golden_turnip"
+    }
+  ],
+  "result":
+  {
+    "item": "foodplusid:mysterious_medicine"
+  }
+}
