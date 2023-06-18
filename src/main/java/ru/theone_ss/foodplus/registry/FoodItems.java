@@ -104,7 +104,7 @@ public class FoodItems {
     public static final Item HONEY_GUM = add("honey_gum", new FoodPlusItem(new Item.Settings().food(new FoodComponent.Builder().hunger(2).saturationModifier(0.1f).build())));
 
     public static final Item TURNIP = add("turnip", new FoodPlusItem(new Item.Settings().food(new FoodComponent.Builder().hunger(9).saturationModifier(0.9f).build())));
-    public static final Item GOLDEN_TURNIP = add("golden_turnip", new FoodPlusItem(new Item.Settings().rarity(Rarity.EPIC).food(new FoodComponent.Builder().hunger(13).saturationModifier(1.4f)
+    public static final Item GOLDEN_TURNIP = add("golden_turnip", new FoodPlusItem(new Item.Settings().rarity(Rarity.RARE).food(new FoodComponent.Builder().hunger(12).saturationModifier(1.2f)
             .statusEffect(new StatusEffectInstance(StatusEffects.REGENERATION, 100 * 12, 1), 1f)
             .statusEffect(new StatusEffectInstance(StatusEffects.ABSORPTION
                     .addAttributeModifier(EntityAttributes.GENERIC_MAX_HEALTH, "5D6F0BA2-1186-46AC-B896-C61C5CEE99CC", 6.0, EntityAttributeModifier.Operation.ADDITION), 600 * 20), 1f) // пока действует ABSORPTION, будет 3 доп хп
@@ -113,6 +113,8 @@ public class FoodItems {
     public static final Item COOKED_SNIFFER_MEAT = add("cooked_sniffer_meat", new FoodPlusItem(new Item.Settings().food(new FoodComponent.Builder().hunger(9).saturationModifier(0.9f).meat().build())));
     public static final Item HOT_STUFF = add("hot_stuff", new HotStuffItem(new Item.Settings().maxCount(16).food(new FoodComponent.Builder().hunger(9).saturationModifier(0.7f)
             .statusEffect(new StatusEffectInstance(StatusEffects.FIRE_RESISTANCE, 20 * 12), 1f).build())));
+    public static final Item MYSTERIOUS_MEDICINE = add("mysterious_medicine", new MysteriousMedicineItem(new Item.Settings().rarity(Rarity.EPIC).food(new FoodComponent.Builder().hunger(16).saturationModifier(1.6f)
+            .statusEffect(new StatusEffectInstance(StatusEffects.NAUSEA, 25 * 12), 1f).alwaysEdible().build())));
 
     private static <T extends Item> T add(String name, T item)
     {
