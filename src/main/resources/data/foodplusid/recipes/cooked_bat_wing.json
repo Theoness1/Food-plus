@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:smelting",
+  "category": "food",
+  "cookingtime": 200,
+  "experience": 0.25,
+  "ingredient": {
+    "item": "foodplusid:bat_wing"
+  },
+  "result": "foodplusid:cooked_bat_wing"
+}
