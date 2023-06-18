@@ -27,8 +27,9 @@ public class HotStuffItem extends Item {
         if (!world.isClient)
         {
             world.setBlockState(pos, fireBlock);
-            user.setPosition(user.getX(), user.getY() + 1, user.getZ());
         }
+
+        user.setPosition(user.getX(), user.getY() + 1, user.getZ());
 
         if (stack.isEmpty())
         {
