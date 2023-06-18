@@ -90,5 +90,7 @@
   "item.foodplusid.raw_sniffer_meat": "Raw Sniffer",
   "item.foodplusid.cooked_sniffer_meat": "Cooked Sniffer",
   "item.foodplusid.hot_stuff": "Hot Stuff",
-  "item.foodplusid.mysterious_medicine": "Mysterious Medicine"
+  "item.foodplusid.mysterious_medicine": "Mysterious Medicine",
+  "item.foodplusid.bat_wing": "Bat Wing",
+  "item.foodplusid.cooked_bat_wing": "Cooked Bat Wing"
 }

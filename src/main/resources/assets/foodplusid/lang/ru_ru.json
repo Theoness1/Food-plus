@@ -90,5 +90,7 @@
   "item.foodplusid.raw_sniffer_meat": "Сырой сниффер",
   "item.foodplusid.cooked_sniffer_meat": "Приготовленный сниффер",
   "item.foodplusid.hot_stuff": "Горячая штучка",
-  "item.foodplusid.mysterious_medicine": "Загадочная микстура"
+  "item.foodplusid.mysterious_medicine": "Загадочная микстура",
+  "item.foodplusid.bat_wing": "Крыло летучки",
+  "item.foodplusid.cooked_bat_wing": "Жареное крыло летучки"
 }
