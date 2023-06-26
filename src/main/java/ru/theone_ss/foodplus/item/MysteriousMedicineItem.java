@@ -1,24 +1,40 @@
 package ru.theone_ss.foodplus.item;
 
+import net.minecraft.client.item.TooltipContext;
+import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.attribute.EntityAttributes;
+import net.minecraft.entity.mob.GiantEntity;
+import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.particle.ParticleTypes;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
+import net.minecraft.text.MutableText;
+import net.minecraft.text.Text;
+import net.minecraft.util.ActionResult;
+import net.minecraft.util.Formatting;
+import net.minecraft.util.Hand;
 import net.minecraft.util.math.random.Random;
 import net.minecraft.world.World;
+import org.jetbrains.annotations.Nullable;
 
+import java.util.List;
 import java.util.Objects;
 
 public class MysteriousMedicineItem extends Item {
 
     protected final Random random = Random.create();
+    private final MutableText titleText = (MutableText) Text.of("Do not give to Zombie");
 
     public MysteriousMedicineItem(Settings settings) {
         super(settings);
+    }
+
+    public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
+        tooltip.add(titleText.formatted(Formatting.GRAY)); //текст добавляет к предмету
     }
 
     public ItemStack finishUsing(ItemStack stack, World world, LivingEntity user)
@@ -46,4 +62,21 @@ public class MysteriousMedicineItem extends Item {
         return stack;
     }
 
+    public ActionResult useOnEntity(ItemStack stack, PlayerEntity user, LivingEntity entity, Hand hand) {
+        ItemStack itemStack = user.getStackInHand(hand);
+        if(itemStack.isOf(this) && entity.isUndead())
+        {
+            itemStack.decrement(1);
+            if(user.getWorld() instanceof ServerWorld serverWorld)
+            {
+                GiantEntity giantEntity = new GiantEntity(EntityType.GIANT, user.getWorld());
+                serverWorld.spawnEntity(giantEntity);
+                entity.kill();
+                //giantEntity.copyPositionAndRotation(entity);
+                giantEntity.setPosition(entity.getX(), entity.getY(), entity.getZ());
+            }
+            return ActionResult.PASS;
+        }
+        return super.useOnEntity(stack, user, entity, hand);
+    }
 }
