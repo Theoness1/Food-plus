@@ -55,7 +55,7 @@ public class GiantMixin extends PathAwareEntity {
     }
 
     protected void initCustomGoals() {
-        this.goalSelector.add(2, new MeleeAttackGoal(this, 0.5, false));
+        this.goalSelector.add(2, new MeleeAttackGoal(this, 0.35, false));
         this.goalSelector.add(7, new WanderAroundFarGoal(this, 0.4)); // бегает по территории ищет гоал
         this.targetSelector.add(3, new ActiveTargetGoal(this, PlayerEntity.class, true));
         this.targetSelector.add(3, new ActiveTargetGoal(this, MerchantEntity.class, false));

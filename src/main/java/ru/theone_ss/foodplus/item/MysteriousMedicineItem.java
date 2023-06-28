@@ -27,7 +27,7 @@ import java.util.Objects;
 public class MysteriousMedicineItem extends Item {
 
     protected final Random random = Random.create();
-    private final MutableText titleText = (MutableText) Text.of("Do not give to Zombie");
+    private final MutableText titleText = (MutableText) Text.of("Don't give zombies");
 
     public MysteriousMedicineItem(Settings settings) {
         super(settings);
