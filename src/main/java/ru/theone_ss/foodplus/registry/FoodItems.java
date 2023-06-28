@@ -106,8 +106,7 @@ public class FoodItems {
     public static final Item TURNIP = add("turnip", new FoodPlusItem(new Item.Settings().food(new FoodComponent.Builder().hunger(8).saturationModifier(0.9f).build())));
     public static final Item GOLDEN_TURNIP = add("golden_turnip", new FoodPlusItem(new Item.Settings().rarity(Rarity.RARE).food(new FoodComponent.Builder().hunger(11).saturationModifier(1.1f)
             .statusEffect(new StatusEffectInstance(StatusEffects.REGENERATION, 100 * 12, 1), 1f)
-            .statusEffect(new StatusEffectInstance(StatusEffects.ABSORPTION
-                    .addAttributeModifier(EntityAttributes.GENERIC_MAX_HEALTH, "5D6F0BA2-1186-46AC-B896-C61C5CEE99CC", 6.0, EntityAttributeModifier.Operation.ADDITION), 600 * 20), 1f) // пока действует ABSORPTION, будет 3 доп хп
+            .statusEffect(new StatusEffectInstance(StatusEffects.ABSORPTION, 600 * 20, 1), 1f)
             .statusEffect(new StatusEffectInstance(StatusEffects.STRENGTH, 200 * 20), 1f).alwaysEdible().build())));
     public static final Item RAW_SNIFFER_MEAT = add("raw_sniffer_meat", new FoodPlusItem(new Item.Settings().food(new FoodComponent.Builder().hunger(4).saturationModifier(0.4f).meat().build())));
     public static final Item COOKED_SNIFFER_MEAT = add("cooked_sniffer_meat", new FoodPlusItem(new Item.Settings().food(new FoodComponent.Builder().hunger(9).saturationModifier(0.9f).meat().build())));
