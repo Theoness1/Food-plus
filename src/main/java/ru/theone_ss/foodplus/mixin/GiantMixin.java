@@ -41,7 +41,7 @@ public class GiantMixin extends PathAwareEntity {
     private  static void createGiantAttributes(CallbackInfoReturnable<DefaultAttributeContainer.Builder> cir){
         cir.setReturnValue(HostileEntity.createHostileAttributes()
                 .add(EntityAttributes.GENERIC_MAX_HEALTH, 250.0)
-                .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 0.5)
+                .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 0.85)
                 .add(EntityAttributes.GENERIC_ATTACK_DAMAGE, 16.0)
                 .add(EntityAttributes.GENERIC_FOLLOW_RANGE, 55.0)
                 .add(EntityAttributes.GENERIC_ARMOR, 16.0));
@@ -56,7 +56,7 @@ public class GiantMixin extends PathAwareEntity {
 
     protected void initCustomGoals() {
         this.goalSelector.add(2, new MeleeAttackGoal(this, 0.35, false));
-        this.goalSelector.add(7, new WanderAroundFarGoal(this, 0.4)); // бегает по территории ищет гоал
+        this.goalSelector.add(7, new WanderAroundFarGoal(this, 0.25)); // бегает по территории ищет гоал
         this.targetSelector.add(3, new ActiveTargetGoal(this, PlayerEntity.class, true));
         this.targetSelector.add(3, new ActiveTargetGoal(this, MerchantEntity.class, false));
         this.targetSelector.add(3, new ActiveTargetGoal(this, IronGolemEntity.class, true));

@@ -7,7 +7,7 @@
   "start_pool": "foodplusid:deepslate_mini_camps",
   "size": 5,
   "start_height": {
-    "absolute": -82
+    "absolute": -89
   },
   "project_start_to_heightmap": "WORLD_SURFACE_WG",
   "max_distance_from_center": 80,
