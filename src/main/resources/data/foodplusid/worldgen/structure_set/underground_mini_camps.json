@@ -2,12 +2,12 @@
   "structures": [
     {
       "structure": "foodplusid:underground_mini_camp",
-      "weight": 1
+      "weight": 20
     }
   ],
   "placement": {
     "type": "minecraft:random_spread",
-    "spacing": 9,
+    "spacing": 10,
     "separation": 5,
     "salt": 1646201374
   }

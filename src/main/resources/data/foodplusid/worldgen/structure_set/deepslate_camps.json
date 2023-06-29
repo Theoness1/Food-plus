@@ -2,13 +2,13 @@
   "structures": [
     {
       "structure": "foodplusid:deepslate_camp",
-      "weight": 1
+      "weight": 15
     }
   ],
   "placement": {
     "type": "minecraft:random_spread",
     "spacing": 12,
-    "separation": 8,
+    "separation": 9,
     "salt": 1932307459
   }
 }
