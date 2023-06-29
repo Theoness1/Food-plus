@@ -1,0 +1,14 @@
+{
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 21,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "foodplusid:secret/amogus",
+        "projection": "rigid",
+        "processors": "minecraft:empty"
+      }
+    }
+  ]
+}

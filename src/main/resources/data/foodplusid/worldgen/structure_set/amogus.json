@@ -1,0 +1,14 @@
+{
+  "structures": [
+    {
+      "structure": "foodplusid:amogus",
+      "weight": 20
+    }
+  ],
+  "placement": {
+    "type": "minecraft:random_spread",
+    "spacing": 520,
+    "separation": 490,
+    "salt": 1345678979
+  }
+}
